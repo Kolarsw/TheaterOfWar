@@ -15,6 +15,7 @@ import axisHierarchicalUnitsRaw from "@/data/mock-units-axis-hierarchical.json";
 import equipmentDataRaw from "@/data/mock-equipment.json";
 import supplyLinesRaw from "@/data/mock-supply-lines.json";
 import timelineUnitsRaw from "@/data/mock-units-timeline.json";
+import eventsRaw from "@/data/mock-events.json";
 
 // ─── Types ───────────────────────────────────────────────────────────
 
@@ -406,6 +407,72 @@ export function getSupplyLineArrowheads(beforeDate?: string): GeoJSON.FeatureCol
           supply_type: sl.supply_type,
           status: sl.status,
           bearing,
+        },
+      };
+    }),
+  };
+}
+
+// ─── Event/Battle Types & Functions ──────────────────────────────────
+
+export interface BattleEvent {
+  event_id: string;
+  event_name: string;
+  event_type: "battle" | "bombing" | "naval_engagement" | "airborne_operation" | "siege";
+  timestamp_start: string;
+  timestamp_end: string;
+  h3_index: string;
+  lat: number;
+  lng: number;
+  factions_involved: string[];
+  units_involved: string[];
+  outcome: "allied_victory" | "axis_victory" | "inconclusive" | "ongoing";
+  casualties_allied: number | null;
+  casualties_axis: number | null;
+  description: string;
+  data_confidence: "high" | "medium" | "low" | "estimated";
+}
+
+const allEvents: BattleEvent[] = eventsRaw as BattleEvent[];
+
+export function getEvents(beforeDate?: string): BattleEvent[] {
+  if (!beforeDate) return allEvents;
+  const ms = new Date(beforeDate).getTime();
+  return allEvents.filter((e) => new Date(e.timestamp_start).getTime() <= ms);
+}
+
+export function getEventById(eventId: string): BattleEvent | undefined {
+  return allEvents.find((e) => e.event_id === eventId);
+}
+
+export function getEventGeoJSON(beforeDate?: string): GeoJSON.FeatureCollection {
+  const events = getEvents(beforeDate);
+  return {
+    type: "FeatureCollection",
+    features: events.map((e) => {
+      // Sum troop counts of all involved units
+      const totalTroops = e.units_involved.reduce((sum, uid) => {
+        const unit = getUnitById(uid);
+        return sum + (unit?.troop_count || 0);
+      }, 0);
+      const totalCasualties = (e.casualties_allied || 0) + (e.casualties_axis || 0);
+      const significance = totalTroops + totalCasualties * 8;
+
+      return {
+        type: "Feature" as const,
+        geometry: { type: "Point" as const, coordinates: [e.lng, e.lat] },
+        properties: {
+          event_id: e.event_id,
+          event_name: e.event_name,
+          event_type: e.event_type,
+          outcome: e.outcome,
+          casualties_allied: e.casualties_allied,
+          casualties_axis: e.casualties_axis,
+          factions: e.factions_involved.join(","),
+          timestamp_start: e.timestamp_start,
+          timestamp_end: e.timestamp_end,
+          total_troops: totalTroops,
+          significance,
         },
       };
     }),

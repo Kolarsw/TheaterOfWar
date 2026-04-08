@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useAppStore } from "@/stores/useAppStore";
-import { getTroopPoints, getRootDivisionId, hasEquipmentData, getSupplyLineGeoJSON, getSupplyLineArrowheads } from "@/services/dataService";
+import { getTroopPoints, getRootDivisionId, hasEquipmentData, getSupplyLineGeoJSON, getSupplyLineArrowheads, getEventGeoJSON } from "@/services/dataService";
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
 
@@ -298,6 +298,126 @@ export default function GlobeMap() {
         },
       });
 
+      // --- Events/Battles Scatterplot Layer ---
+      map.current.addSource("events", {
+        type: "geojson",
+        data: getEventGeoJSON(currentDate),
+      });
+
+      // Event glow
+      map.current.addLayer({
+        id: "events-glow",
+        type: "circle",
+        source: "events",
+        paint: {
+          "circle-radius": [
+            "interpolate", ["linear"], ["get", "significance"],
+            0, 10,
+            5000, 16,
+            30000, 24,
+            80000, 34
+          ],
+          "circle-color": [
+            "case",
+            ["==", ["get", "outcome"], "allied_victory"], "rgba(0, 212, 255, 0.12)",
+            ["==", ["get", "outcome"], "axis_victory"], "rgba(255, 51, 68, 0.12)",
+            "rgba(255, 170, 0, 0.12)"
+          ],
+          "circle-blur": 1,
+        },
+      });
+
+      // Event markers
+      map.current.addLayer({
+        id: "events-markers",
+        type: "circle",
+        source: "events",
+        paint: {
+          "circle-radius": [
+            "interpolate", ["linear"], ["get", "significance"],
+            0, 5,
+            5000, 8,
+            30000, 12,
+            80000, 18
+          ],
+          "circle-color": [
+            "case",
+            ["==", ["get", "outcome"], "allied_victory"], "#00d4ff",
+            ["==", ["get", "outcome"], "axis_victory"], "#ff3344",
+            "#ffaa00"
+          ],
+          "circle-stroke-width": 1.5,
+          "circle-stroke-color": "rgba(0, 0, 0, 0.7)",
+          "circle-opacity": 0.8,
+        },
+      });
+
+      // Event labels
+      map.current.addLayer({
+        id: "events-labels",
+        type: "symbol",
+        source: "events",
+        layout: {
+          "text-field": ["get", "event_name"],
+          "text-font": ["DIN Pro Medium", "Arial Unicode MS Bold"],
+          "text-size": 10,
+          "text-offset": [0, 1.5],
+          "text-anchor": "top",
+          "text-allow-overlap": false,
+        },
+        paint: {
+          "text-color": "rgba(224, 224, 224, 0.65)",
+          "text-halo-color": "rgba(10, 10, 15, 0.8)",
+          "text-halo-width": 1,
+        },
+      });
+
+      // Event hover
+      map.current.on("mouseenter", "events-markers", (e) => {
+        if (!map.current) return;
+        map.current.getCanvas().style.cursor = "pointer";
+        if (e.features && e.features.length > 0) {
+          const props = e.features[0].properties;
+          const coords = (e.features[0].geometry as GeoJSON.Point).coordinates.slice() as [number, number];
+          const outcomeColor = props?.outcome === "allied_victory" ? "#00d4ff"
+            : props?.outcome === "axis_victory" ? "#ff3344" : "#ffaa00";
+          const typeLabel = (props?.event_type || "").replace(/_/g, " ").toUpperCase();
+          const alliedCas = props?.casualties_allied != null ? Number(props.casualties_allied).toLocaleString() : "—";
+          const axisCas = props?.casualties_axis != null ? Number(props.casualties_axis).toLocaleString() : "—";
+
+          popupRef.current?.remove();
+          popupRef.current = new mapboxgl.Popup({
+            closeButton: false, closeOnClick: false,
+            className: "unit-tooltip", offset: 12,
+          })
+            .setLngLat(coords)
+            .setHTML(
+              `<div style="font-family:monospace;font-size:11px;color:#e0e0e0;padding:2px 4px;">
+                <strong>${props?.event_name}</strong><br/>
+                <span style="color:rgba(255,255,255,0.4)">${typeLabel}</span><br/>
+                <span style="color:${outcomeColor}">${(props?.outcome || "").replace(/_/g, " ").toUpperCase()}</span><br/>
+                <span style="color:rgba(255,255,255,0.4)">Casualties:</span> <span style="color:#00d4ff">Allied ${alliedCas}</span> · <span style="color:#ff3344">Axis ${axisCas}</span>
+              </div>`
+            )
+            .addTo(map.current);
+        }
+      });
+
+      map.current.on("mouseleave", "events-markers", () => {
+        if (!map.current) return;
+        map.current.getCanvas().style.cursor = "";
+        popupRef.current?.remove();
+      });
+
+      // Click event marker to select
+      map.current.on("click", "events-markers", (e) => {
+        if (!e.features || e.features.length === 0) return;
+        const props = e.features[0].properties;
+        if (props?.event_id) {
+          useAppStore.getState().setSelectedEventId(props.event_id);
+        }
+      });
+
       // --- Interactions ---
 
       // Click cluster — selectable only if all points share the same root division
@@ -490,6 +610,10 @@ export default function GlobeMap() {
         if (arrowSource) {
           arrowSource.setData(getSupplyLineArrowheads(state.currentDate));
         }
+        const eventsSource = map.current.getSource("events") as mapboxgl.GeoJSONSource | undefined;
+        if (eventsSource) {
+          eventsSource.setData(getEventGeoJSON(state.currentDate));
+        }
       }
     });
     return unsub;
@@ -512,6 +636,12 @@ export default function GlobeMap() {
         ["supply-arcs", "supply-arcs-glow", "supply-arcs-shadow", "supply-arrow-heads"].forEach((id) => {
           if (map.current!.getLayer(id)) {
             map.current!.setLayoutProperty(id, "visibility", arcVisibility);
+          }
+        });
+        const eventsVisibility = state.visibleLayers.events ? "visible" : "none";
+        ["events-glow", "events-markers", "events-labels"].forEach((id) => {
+          if (map.current!.getLayer(id)) {
+            map.current!.setLayoutProperty(id, "visibility", eventsVisibility);
           }
         });
       }
