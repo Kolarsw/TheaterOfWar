@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div
       className="flex flex-col h-full ring-1 ring-inset"
-      style={{ '--tw-ring-color': mode === 'historical' ? '#00d4ff' : '#ffaa00' } as React.CSSProperties}
+      style={{ '--tw-ring-color': mode === 'historical' ? 'rgba(0, 212, 255, 0.35)' : 'rgba(255, 170, 0, 0.35)' } as React.CSSProperties}
     >
       <TopNav />
 

@@ -55,6 +55,9 @@ export default function TimelineScrubber() {
   const progress = (currentMs - warStart) / (warEnd - warStart);
 
   const accent = mode === "historical" ? CYAN : AMBER;
+  const borderColor = mode === "historical"
+    ? "rgba(0, 212, 255, 0.35)"
+    : "rgba(255, 170, 0, 0.35)";
 
   const sliderStyle = useMemo(() => {
     const thumbShadow = mode === "historical"
@@ -127,7 +130,7 @@ export default function TimelineScrubber() {
       <style>{sliderStyle}</style>
       <div
         className="bg-panel/35 backdrop-blur-sm rounded-lg px-4 py-4"
-        style={{ border: `1px solid ${accent}` }}
+        style={{ border: `2px solid ${borderColor}` }}
       >
         {/* Header: Timeline label + date */}
         <div className="flex items-center justify-between mb-3">

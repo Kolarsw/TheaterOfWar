@@ -42,6 +42,9 @@ export default function ViewOverlay() {
   const config = overlayConfig[activeView];
 
   const accent = mode === "historical" ? CYAN : AMBER;
+  const borderColor = mode === "historical"
+    ? "rgba(0, 212, 255, 0.35)"
+    : "rgba(255, 170, 0, 0.35)";
 
   return (
     <>
@@ -63,7 +66,7 @@ export default function ViewOverlay() {
         <div className="absolute top-4 left-4 z-10 mt-14 w-72 max-h-[calc(100%-6rem)] overflow-y-auto">
           <div
             className="bg-panel/35 backdrop-blur-sm rounded-lg p-4"
-            style={{ border: `1px solid ${accent}` }}
+            style={{ border: `2px solid ${borderColor}` }}
           >
             <h2
               className="text-xs font-mono tracking-widest uppercase mb-2"
@@ -88,7 +91,7 @@ export default function ViewOverlay() {
         <div className="absolute top-4 right-14 z-10 w-72 max-h-[calc(100%-6rem)] overflow-y-auto">
           <div
             className="bg-panel/35 backdrop-blur-sm rounded-lg p-4"
-            style={{ border: `1px solid ${accent}` }}
+            style={{ border: `2px solid ${borderColor}` }}
           >
             <h2
               className="text-xs font-mono tracking-widest uppercase mb-2"
@@ -110,7 +113,7 @@ export default function ViewOverlay() {
         <div className="absolute bottom-28 left-4 right-4 z-10">
           <div
             className="bg-panel/35 backdrop-blur-sm rounded-lg p-4 max-h-48 overflow-y-auto"
-            style={{ border: `1px solid ${accent}` }}
+            style={{ border: `2px solid ${borderColor}` }}
           >
             <h2
               className="text-xs font-mono tracking-widest uppercase mb-2"

@@ -30,9 +30,9 @@ export default function GlobeMap() {
 
       map.current.setFog({
         color: "rgb(10, 10, 15)",
-        "high-color": "rgb(20, 20, 40)",
-        "horizon-blend": 0.08,
-        "space-color": "rgb(5, 5, 12)",
+        "high-color": "rgb(0, 35, 55)",
+        "horizon-blend": 0.35,
+        "space-color": "rgb(8, 10, 18)",
         "star-intensity": 0.4,
       });
 
