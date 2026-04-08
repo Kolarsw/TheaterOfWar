@@ -148,22 +148,46 @@ export default function TimelineScrubber() {
           </span>
         </div>
 
-        {/* Slider */}
-        <div className="relative mb-3">
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.0001"
-            value={progress}
-            onChange={handleSliderChange}
-            className="timeline-slider w-full h-1 appearance-none bg-panel-border rounded-full cursor-pointer"
-            aria-label="Timeline position"
-          />
-          <div
-            className="absolute top-1/2 left-0 h-1 rounded-full pointer-events-none -translate-y-1/2"
-            style={{ width: `${progress * 100}%`, backgroundColor: accent, opacity: 0.3 }}
-          />
+        {/* Slider with step buttons */}
+        <div className="flex items-center gap-2 mb-3">
+          <button
+            onClick={() => {
+              const ms = Math.max(new Date(currentDate).getTime() - msPerTick[timeScale], warStart);
+              setCurrentDate(new Date(ms).toISOString());
+            }}
+            className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80"
+            style={{ border: `1px solid ${borderColor}` }}
+            aria-label="Step back one unit"
+          >
+            −
+          </button>
+          <div className="relative flex-1">
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.0001"
+              value={progress}
+              onChange={handleSliderChange}
+              className="timeline-slider w-full h-1 appearance-none bg-panel-border rounded-full cursor-pointer"
+              aria-label="Timeline position"
+            />
+            <div
+              className="absolute top-1/2 left-0 h-1 rounded-full pointer-events-none -translate-y-1/2"
+              style={{ width: `${progress * 100}%`, backgroundColor: accent, opacity: 0.3 }}
+            />
+          </div>
+          <button
+            onClick={() => {
+              const ms = Math.min(new Date(currentDate).getTime() + msPerTick[timeScale], warEnd);
+              setCurrentDate(new Date(ms).toISOString());
+            }}
+            className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80"
+            style={{ border: `1px solid ${borderColor}` }}
+            aria-label="Step forward one unit"
+          >
+            +
+          </button>
         </div>
 
         {/* Play + Speed squares row */}
