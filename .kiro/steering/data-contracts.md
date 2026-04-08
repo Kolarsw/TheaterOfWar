@@ -75,5 +75,61 @@ These define the JSON structures the front end expects. Phase 1 uses mock data m
 }
 ```
 
+## Supply Dependency Node
+```json
+{
+  "node_id": "string",
+  "node_type": "port | rail_junction | supply_depot | front_line_unit",
+  "name": "string",
+  "faction": "allied | axis",
+  "h3_index": "string",
+  "lat": "number",
+  "lng": "number",
+  "capacity_tons_per_day": "number",
+  "current_throughput_tons_per_day": "number",
+  "upstream_node_ids": ["string"],
+  "downstream_node_ids": ["string"],
+  "timestamp": "ISO 8601 datetime"
+}
+```
+
+## Theater Summary Record
+```json
+{
+  "theater": "western_europe | eastern_front | pacific | north_africa | atlantic",
+  "timestamp": "ISO 8601 datetime",
+  "allied_strength": "number",
+  "axis_strength": "number",
+  "allied_casualties_30d": "number",
+  "axis_casualties_30d": "number",
+  "supply_throughput_tons": "number",
+  "contested_hexes": "number",
+  "allied_controlled_hexes": "number",
+  "axis_controlled_hexes": "number"
+}
+```
+
+## Simulation Parameters
+```json
+{
+  "simulation_id": "string",
+  "base_timestamp": "ISO 8601 datetime",
+  "parameters": {
+    "troop_reinforcement_multiplier": { "allied": "number", "axis": "number" },
+    "supply_throughput_multiplier": "number",
+    "weather_severity": "number (0-100)",
+    "air_superiority": { "allied": "number (0-100)", "axis": "number (0-100)" },
+    "naval_interdiction_effectiveness": "number (0-100)",
+    "industrial_production_rate": { "allied": "number", "axis": "number" },
+    "intelligence_accuracy": { "allied": "number (0-100)", "axis": "number (0-100)" }
+  }
+}
+```
+
 ## Time Range
 All mock data and queries should support filtering by a `[start_timestamp, end_timestamp]` range. The timeline scrubber drives this filter globally.
+
+## Mode Context
+All views respect the global mode toggle:
+- **Historical Mode:** Data is read-only, sourced from Gold tables or mock JSON.
+- **Simulation Mode:** Parameters become editable. Simulation results are computed client-side (Phase 1) or via Databricks Model Serving (Phase 3) and displayed alongside or instead of historical data.

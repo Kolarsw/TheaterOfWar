@@ -16,7 +16,9 @@ inclusion: always
 - State: Zustand for global state (timeline position, selected unit, active filters).
 - Map: Mapbox GL JS as the base map, Deck.gl overlay layers rendered via @deck.gl/mapbox integration.
 - Data fetching: React Query (TanStack Query) for async data in Phase 3. Direct JSON imports for Phase 1 mock data.
-- File structure: feature-based organization (e.g., `features/map/`, `features/timeline/`, `features/oob-panel/`).
+- File structure: feature-based organization (e.g., `features/map/`, `features/timeline/`, `features/oob-panel/`, `features/logistics/`, `features/network-graph/`, `features/theaters/`, `features/battles/`, `features/simulation/`).
+- Views live in `app/` using Next.js App Router routes (e.g., `app/logistics/page.tsx`, `app/oob/page.tsx`).
+- Shared/reusable components (KPI cards, data tables, filter sidebars, detail panels) live in `components/`.
 
 ## Naming Conventions
 - Components: PascalCase (`TimelineScrubber.tsx`)

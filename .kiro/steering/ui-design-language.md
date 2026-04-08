@@ -20,6 +20,12 @@ Every UI decision should reinforce the feel of a high-end intelligence analysis 
 - Sans-serif for labels and headings (e.g., Inter, DM Sans).
 - Small font sizes are fine — this is a power-user tool, not a consumer app.
 
+## Map Projection
+- **Globe projection** at low zoom levels (zoom < ~5) for full-world strategic view (Pacific theater, Atlantic convoys, US entry).
+- **Seamless transition** to Mercator projection as user zooms in for ground-level tactical detail in European/African/Pacific theaters.
+- Mapbox GL JS handles this natively via `projection: 'globe'`.
+- Globe view = Palantir Gotham strategic overview. Zoomed-in = Foundry-style tactical map.
+
 ## Map Layers (Deck.gl)
 - **HexagonLayer:** Terrain control, supply density. Use color ramps from dark blue (low) to cyan/amber (high).
 - **IconLayer:** Troop positions using NATO APP-6 military symbology.
