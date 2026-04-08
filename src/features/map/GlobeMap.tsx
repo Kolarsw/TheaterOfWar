@@ -413,6 +413,12 @@ export default function GlobeMap() {
       });
     });
 
+    map.current.on("zoom", () => {
+      if (map.current) {
+        useAppStore.getState().setMapZoom(map.current.getZoom());
+      }
+    });
+
     map.current.addControl(
       new mapboxgl.NavigationControl({ visualizePitch: true }),
       "top-right"

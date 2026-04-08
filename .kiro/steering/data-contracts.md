@@ -13,16 +13,20 @@ These define the JSON structures the front end expects. Phase 1 uses mock data m
   "unit_name": "string",
   "faction": "allied | axis",
   "unit_type": "infantry | armor | artillery | airborne | naval | logistics",
+  "echelon": "division | regiment | battalion | company",
   "nato_symbol_code": "string (APP-6 SIDC)",
   "parent_unit_id": "string | null",
   "timestamp": "ISO 8601 datetime",
   "h3_index": "string (H3 resolution 5-7)",
-  "lat": "number",
-  "lng": "number",
-  "strength_percent": "number (0-100)",
-  "supply_level": "number (0-100)",
-  "combat_effectiveness": "number (0-100)",
-  "morale": "number (0-100)"
+  "lat": "number | null",
+  "lng": "number | null",
+  "troop_count": "number | null",
+  "strength_percent": "number (0-100) | null",
+  "supply_level": "number (0-100) | null",
+  "combat_effectiveness": "number (0-100) | null",
+  "morale": "number (0-100) | null",
+  "data_confidence": "high | medium | low | estimated",
+  "data_source": "string | null"
 }
 ```
 

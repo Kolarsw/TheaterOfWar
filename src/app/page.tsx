@@ -42,7 +42,7 @@ export default function Home() {
         {/* Unit detail panel — lite on command, rich on oob */}
         {activeView === "oob" ? <OobDetailPanel /> : <UnitDetailPanel />}
 
-        {/* Timeline scrubber — always visible */}
+        {/* Timeline scrubber — always visible, includes data disclaimer */}
         <TimelineScrubber />
       </div>
     </div>

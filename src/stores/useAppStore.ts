@@ -36,6 +36,7 @@ interface AppState {
   warEnd: number;
   selectedUnitId: string | null;
   flyToTarget: { lng: number; lat: number; zoom: number } | null;
+  mapZoom: number;
   visibleLayers: VisibleLayers;
   setActiveView: (view: ViewId) => void;
   setMode: (mode: AppMode) => void;
@@ -48,6 +49,7 @@ interface AppState {
   cyclePlaybackSpeed: () => void;
   setSelectedUnitId: (id: string | null) => void;
   flyTo: (lng: number, lat: number, zoom?: number) => void;
+  setMapZoom: (zoom: number) => void;
   toggleLayer: (layer: LayerKey) => void;
 }
 
@@ -62,6 +64,7 @@ export const useAppStore = create<AppState>((set) => ({
   warEnd: WAR_END,
   selectedUnitId: null,
   flyToTarget: null,
+  mapZoom: 3,
   visibleLayers: { units: true, supplyArcs: true, hexControl: false, events: true },
   setActiveView: (view) => set({ activeView: view }),
   setMode: (mode) => set({ mode }),
@@ -82,6 +85,7 @@ export const useAppStore = create<AppState>((set) => ({
     }),
   setSelectedUnitId: (id) => set({ selectedUnitId: id }),
   flyTo: (lng, lat, zoom = 10) => set({ flyToTarget: { lng, lat, zoom } }),
+  setMapZoom: (zoom) => set({ mapZoom: zoom }),
   toggleLayer: (layer) =>
     set((state) => ({
       visibleLayers: {

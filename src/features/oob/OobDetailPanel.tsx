@@ -43,16 +43,23 @@ interface EquipmentEntry {
 
 const equipment = equipmentData as Record<string, EquipmentEntry>;
 
-function StatRow({ label, value, accent }: { label: string; value: string; accent: string }) {
+function StatRow({ label, value, accent }: { label: string; value: string | null | undefined; accent: string }) {
+  const isNullValue = value === null || value === undefined || value === "—";
   return (
     <div className="flex justify-between items-center">
       <span className="text-[10px] font-mono text-foreground/40 uppercase tracking-wide">{label}</span>
-      <span className="text-xs font-mono" style={{ color: accent }}>{value}</span>
+      <span
+        className="text-xs font-mono"
+        style={{ color: isNullValue ? "rgba(224,224,224,0.2)" : accent }}
+      >
+        {isNullValue ? "—" : value}
+      </span>
     </div>
   );
 }
 
-function BarFill({ pct, color }: { pct: number; color: string }) {
+function BarFill({ pct, color }: { pct: number | null | undefined; color: string }) {
+  if (pct === null || pct === undefined) return null;
   return (
     <div className="w-full h-1.5 bg-panel-border rounded-full overflow-hidden">
       <div

@@ -32,11 +32,17 @@ const allUnits: Unit[] = [
   ...axisUnits.filter((u) => !hierarchicalIds.has(u.unit_id)) as Unit[],
 ];
 
-function StatRow({ label, value, accent }: { label: string; value: string; accent: string }) {
+function StatRow({ label, value, accent }: { label: string; value: string | null | undefined; accent: string }) {
+  const isNullValue = value === null || value === undefined || value === "—";
   return (
     <div className="flex justify-between items-center">
       <span className="text-[10px] font-mono text-foreground/40 uppercase tracking-wide">{label}</span>
-      <span className="text-xs font-mono" style={{ color: accent }}>{value}</span>
+      <span
+        className="text-xs font-mono"
+        style={{ color: isNullValue ? "rgba(224,224,224,0.2)" : accent }}
+      >
+        {isNullValue ? "—" : value}
+      </span>
     </div>
   );
 }
