@@ -125,7 +125,7 @@ export default function TimelineScrubber() {
   return (
     <div className={`absolute z-20 w-[460px] ${
       hasBottomPanel
-        ? "bottom-[13rem] left-4"
+        ? "bottom-[10rem] left-4"
         : "bottom-12 left-4"
     }`}>
       {/* Data disclaimer — sits above the timeline box */}

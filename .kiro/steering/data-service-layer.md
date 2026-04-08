@@ -72,3 +72,10 @@ Each function has a `USE_LIVE_DATA` flag (or env var). When false, returns mock 
 - Triangles at tactical zoom (unclustered) — unchanged
 - The data source changes, not the rendering approach
 - `getTroopPoints()` abstracts this: returns GeoJSON regardless of source
+
+
+### Planned Enhancement: Supply Line Clustering
+- Nearby parallel supply/troop arcs of the same transport mode should merge into a single thicker arc when zoomed out, then split apart as you zoom in
+- Mapbox doesn't support native line clustering — this needs a custom aggregation approach
+- Options: pre-aggregate in the data service by grouping lines with similar source/target regions, or use Deck.gl's ArcLayer with built-in aggregation
+- Priority: after core views are complete, before Phase 2

@@ -62,7 +62,7 @@ export default function ViewOverlay() {
       </div>
 
       {/* Left panel placeholder */}
-      {activeView !== "strategic-command" && activeView !== "oob" && (
+      {activeView !== "strategic-command" && activeView !== "oob" && activeView !== "logistics" && (
         <div className="absolute top-4 left-4 z-10 mt-14 w-72 max-h-[calc(100%-6rem)] overflow-y-auto">
           <div
             className="bg-panel/35 backdrop-blur-sm rounded-lg p-4"
@@ -87,7 +87,7 @@ export default function ViewOverlay() {
       )}
 
       {/* Right panel placeholder */}
-      {activeView !== "strategic-command" && activeView !== "oob" && (
+      {activeView !== "strategic-command" && activeView !== "oob" && activeView !== "logistics" && (
         <div className="absolute top-48 right-4 z-10 w-72 max-h-[calc(100%-14rem)] overflow-y-auto">
           <div
             className="bg-panel/35 backdrop-blur-sm rounded-lg p-4"
@@ -109,7 +109,7 @@ export default function ViewOverlay() {
       )}
 
       {/* Bottom panel placeholder — for data tables, charts */}
-      {(activeView === "logistics" || activeView === "theaters" || activeView === "battles") && (
+      {(activeView === "theaters" || activeView === "battles") && (
         <div className="absolute bottom-28 left-4 right-4 z-10">
           <div
             className="bg-panel/35 backdrop-blur-sm rounded-lg p-4 max-h-48 overflow-y-auto"
@@ -119,7 +119,6 @@ export default function ViewOverlay() {
               className="text-xs font-mono tracking-widest uppercase mb-2"
               style={{ color: accent, opacity: 0.4 }}
             >
-              {activeView === "logistics" && "Supply Routes"}
               {activeView === "theaters" && "Theater Analytics"}
               {activeView === "battles" && "Battle Timeline"}
             </h2>

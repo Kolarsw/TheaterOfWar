@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useAppStore } from "@/stores/useAppStore";
-import { getTroopPoints, getRootDivisionId, hasEquipmentData } from "@/services/dataService";
+import { getTroopPoints, getRootDivisionId, hasEquipmentData, getSupplyLineGeoJSON, getSupplyLineArrowheads } from "@/services/dataService";
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
 
@@ -27,6 +27,26 @@ function createTriangleImage(map: mapboxgl.Map, id: string, color: string, size:
   ctx.stroke();
   const imageData = ctx.getImageData(0, 0, size, size);
   map.addImage(id, { width: size, height: size, data: new Uint8Array(imageData.data.buffer) });
+}
+
+function createArrowImage(map: mapboxgl.Map, id: string, color: string, size: number) {
+  const canvas = document.createElement("canvas");
+  const w = size;
+  const h = size;
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext("2d")!;
+  ctx.fillStyle = color;
+  // Simple triangle arrowhead pointing right, same height as line width
+  ctx.beginPath();
+  ctx.moveTo(w, h / 2);       // tip
+  ctx.lineTo(0, 0);            // top-left
+  ctx.lineTo(w * 0.2, h / 2); // notch
+  ctx.lineTo(0, h);            // bottom-left
+  ctx.closePath();
+  ctx.fill();
+  const imageData = ctx.getImageData(0, 0, w, h);
+  map.addImage(id, { width: w, height: h, data: new Uint8Array(imageData.data.buffer) });
 }
 
 export default function GlobeMap() {
@@ -65,6 +85,12 @@ export default function GlobeMap() {
 
       createTriangleImage(map.current, "triangle-allied", "#00d4ff", 12);
       createTriangleImage(map.current, "triangle-axis", "#ff3344", 12);
+
+      // Create arrowhead image for supply arc destinations
+      createArrowImage(map.current, "arrow-cyan", "#00d4ff", 18);
+      createArrowImage(map.current, "arrow-red", "#ff3344", 18);
+      createArrowImage(map.current, "arrow-green", "#44ffaa", 18);
+      createArrowImage(map.current, "arrow-amber", "#ffaa00", 18);
 
       const currentDate = useAppStore.getState().currentDate;
       map.current.addSource("units", {
@@ -132,6 +158,142 @@ export default function GlobeMap() {
         layout: {
           "icon-image": ["case", ["==", ["get", "faction"], "allied"], "triangle-allied", "triangle-axis"],
           "icon-size": ["interpolate", ["linear"], ["zoom"], 8, 0.6, 12, 1.0, 15, 1.4],
+          "icon-allow-overlap": true,
+        },
+      });
+
+      // --- Supply Line Arcs ---
+      map.current.addSource("supply-lines", {
+        type: "geojson",
+        data: getSupplyLineGeoJSON(currentDate),
+      });
+
+      // Arc glow (wider, blurred)
+      map.current.addLayer({
+        id: "supply-arcs-glow",
+        type: "line",
+        source: "supply-lines",
+        paint: {
+          "line-color": [
+            "case",
+            ["==", ["get", "status"], "severed"], "#ff3344",
+            ["==", ["get", "status"], "disrupted"], "#ffaa00",
+            ["==", ["get", "supply_type"], "troops"], "rgba(68, 255, 170, 0.25)",
+            ["==", ["get", "faction"], "allied"], "rgba(0, 212, 255, 0.2)",
+            "rgba(255, 51, 68, 0.2)"
+          ],
+          "line-width": 12,
+          "line-blur": 4,
+          "line-opacity": 0.4,
+        },
+      });
+
+      // Shadow layer for air routes (offset below to simulate altitude)
+      map.current.addLayer({
+        id: "supply-arcs-shadow",
+        type: "line",
+        source: "supply-lines",
+        filter: ["==", ["get", "transport_mode"], "air"],
+        paint: {
+          "line-color": "rgba(0, 0, 0, 0.3)",
+          "line-width": 6,
+          "line-blur": 6,
+          "line-translate": [3, 3],
+          "line-opacity": 0.5,
+        },
+      });
+
+      // Main arc lines — transport mode determines dash pattern
+      // Air = solid, Sea = dashed, Land = dotted
+      // Troop arcs = green (#44ffaa), supply arcs = faction color
+      map.current.addLayer({
+        id: "supply-arcs",
+        type: "line",
+        source: "supply-lines",
+        layout: {
+          "line-cap": "round",
+          "line-join": "round",
+        },
+        paint: {
+          "line-color": [
+            "case",
+            ["==", ["get", "status"], "severed"], "#ff3344",
+            ["==", ["get", "status"], "disrupted"], "#ffaa00",
+            ["==", ["get", "supply_type"], "troops"], "#44ffaa",
+            ["==", ["get", "faction"], "allied"], "#00d4ff",
+            "#ff3344"
+          ],
+          "line-width": 6,
+          "line-opacity": [
+            "case",
+            ["==", ["get", "status"], "severed"], 0.2,
+            ["==", ["get", "status"], "disrupted"], 0.5,
+            0.6
+          ],
+          "line-dasharray": [
+            "case",
+            ["==", ["get", "status"], "severed"], ["literal", [2, 4]],
+            ["==", ["get", "transport_mode"], "sea"], ["literal", [6, 3]],
+            ["==", ["get", "transport_mode"], "land"], ["literal", [0.5, 2]],
+            ["literal", [1, 0]]
+          ],
+        },
+      });
+
+      // Supply arc hover
+      map.current.on("mouseenter", "supply-arcs", (e) => {
+        if (!map.current) return;
+        map.current.getCanvas().style.cursor = "pointer";
+        if (e.features && e.features.length > 0) {
+          const props = e.features[0].properties;
+          const coords = e.lngLat;
+          const statusColor = props?.status === "severed" ? "#ff3344" : props?.status === "disrupted" ? "#ffaa00" : props?.faction === "allied" ? "#00d4ff" : "#ff3344";
+
+          popupRef.current?.remove();
+          popupRef.current = new mapboxgl.Popup({
+            closeButton: false, closeOnClick: false,
+            className: "unit-tooltip", offset: 12,
+          })
+            .setLngLat(coords)
+            .setHTML(
+              `<div style="font-family:monospace;font-size:11px;color:#e0e0e0;padding:2px 4px;">
+                <strong>${props?.source_name} → ${props?.target_name}</strong><br/>
+                <span style="color:${statusColor}">${props?.supply_type?.toUpperCase()} · ${Number(props?.tonnage_per_day).toLocaleString()} tons/day</span><br/>
+                <span style="color:${statusColor}">Status: ${props?.status?.toUpperCase()}</span>
+              </div>`
+            )
+            .addTo(map.current);
+        }
+      });
+
+      map.current.on("mouseleave", "supply-arcs", () => {
+        if (!map.current) return;
+        map.current.getCanvas().style.cursor = "";
+        popupRef.current?.remove();
+      });
+
+      // Arrowhead source and layer at supply line destinations
+      map.current.addSource("supply-arrows", {
+        type: "geojson",
+        data: getSupplyLineArrowheads(currentDate),
+      });
+
+      map.current.addLayer({
+        id: "supply-arrow-heads",
+        type: "symbol",
+        source: "supply-arrows",
+        layout: {
+          "icon-image": [
+            "case",
+            ["==", ["get", "status"], "severed"], "arrow-red",
+            ["==", ["get", "status"], "disrupted"], "arrow-amber",
+            ["==", ["get", "supply_type"], "troops"], "arrow-green",
+            ["==", ["get", "faction"], "allied"], "arrow-cyan",
+            "arrow-red"
+          ],
+          "icon-size": 0.8,
+          "icon-rotate": ["get", "bearing"],
+          "icon-rotation-alignment": "map",
           "icon-allow-overlap": true,
         },
       });
@@ -320,6 +482,14 @@ export default function GlobeMap() {
         if (source) {
           source.setData(getTroopPoints(state.currentDate));
         }
+        const supplySource = map.current.getSource("supply-lines") as mapboxgl.GeoJSONSource | undefined;
+        if (supplySource) {
+          supplySource.setData(getSupplyLineGeoJSON(state.currentDate));
+        }
+        const arrowSource = map.current.getSource("supply-arrows") as mapboxgl.GeoJSONSource | undefined;
+        if (arrowSource) {
+          arrowSource.setData(getSupplyLineArrowheads(state.currentDate));
+        }
       }
     });
     return unsub;
@@ -336,6 +506,12 @@ export default function GlobeMap() {
         ["clusters", "clusters-glow", "cluster-count", "unclustered-triangles"].forEach((id) => {
           if (map.current!.getLayer(id)) {
             map.current!.setLayoutProperty(id, "visibility", visibility);
+          }
+        });
+        const arcVisibility = state.visibleLayers.supplyArcs ? "visible" : "none";
+        ["supply-arcs", "supply-arcs-glow", "supply-arcs-shadow", "supply-arrow-heads"].forEach((id) => {
+          if (map.current!.getLayer(id)) {
+            map.current!.setLayoutProperty(id, "visibility", arcVisibility);
           }
         });
       }
