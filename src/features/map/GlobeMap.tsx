@@ -39,7 +39,7 @@ export default function GlobeMap() {
 
       // Boost land/ocean contrast
       map.current.setPaintProperty("land", "background-color", "#2a2a2a");
-      map.current.setPaintProperty("water", "fill-color", "#060610");
+      map.current.setPaintProperty("water", "fill-color", "rgba(16, 24, 48, 0.75)");
     });
 
     // Navigation controls (zoom, tilt, rotate)
