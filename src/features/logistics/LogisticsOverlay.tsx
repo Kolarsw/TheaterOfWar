@@ -3,15 +3,31 @@
 import { useMemo, useState } from "react";
 import { useAppStore } from "@/stores/useAppStore";
 import KpiCard from "@/components/KpiCard";
+import TimelineScrubber from "@/components/TimelineScrubber";
 import { getSupplyLines, getSupplyStats, SupplyLine } from "@/services/dataService";
 
 const CYAN = "#00d4ff";
 const AMBER = "#ffaa00";
 const RED = "#ff3344";
+const GREEN = "#22c55e";
+const PURPLE = "#a855f7";
+const ORANGE = "#f97316";
 
 type FilterFaction = "all" | "allied" | "axis";
 type FilterStatus = "all" | "active" | "disrupted" | "severed";
 type FilterType = "all" | "ammunition" | "fuel" | "food" | "medical" | "mixed" | "troops";
+
+const supplyTypeColor = (type: string): string => {
+  switch (type) {
+    case "troops": return "rgba(34,197,94,0.65)";
+    case "ammunition": return "rgba(255,51,68,0.65)";
+    case "fuel": return "rgba(249,115,22,0.65)";
+    case "food": return "rgba(255,170,0,0.65)";
+    case "medical": return "rgba(168,85,247,0.65)";
+    case "mixed": return "rgba(0,212,255,0.65)";
+    default: return "rgba(255,255,255,0.4)";
+  }
+};
 
 export default function LogisticsOverlay() {
   const mode = useAppStore((s) => s.mode);
@@ -87,10 +103,16 @@ export default function LogisticsOverlay() {
         </div>
       </div>
 
-      {/* Route table — bottom, sits below timeline */}
-      <div className="absolute bottom-2 left-4 right-4 z-10">
+      {/* Unified bottom panel — timeline + route table */}
+      <div className="absolute bottom-2 left-4 right-4 z-20 flex flex-col gap-2 max-h-[50vh]">
+        {/* Timeline scrubber embedded — constrained width */}
+        <div className="shrink-0 w-[460px]">
+          <TimelineScrubber embedded />
+        </div>
+
+        {/* Route table */}
         <div
-          className="bg-panel/35 backdrop-blur-sm rounded-lg p-3 max-h-52 overflow-y-auto"
+          className="bg-panel/35 backdrop-blur-sm rounded-lg p-3 overflow-y-auto min-h-0 max-h-44"
           style={{ border: `2px solid ${borderColor}` }}
         >
           <h3 className="text-[9px] font-mono tracking-widest uppercase mb-2" style={{ color: accent, opacity: 0.5 }}>
@@ -98,25 +120,27 @@ export default function LogisticsOverlay() {
           </h3>
           <table className="w-full text-[10px] font-mono">
             <thead>
-              <tr className="text-foreground/30 uppercase">
+              <tr className="text-foreground/30 uppercase border-b border-panel-border">
                 <th className="text-left pb-1">Origin</th>
                 <th className="text-left pb-1">Destination</th>
                 <th className="text-left pb-1">Type</th>
-                <th className="text-right pb-1">Tons/Day</th>
                 <th className="text-right pb-1">Status</th>
+                <th className="text-right pb-1">Tons/Day</th>
               </tr>
             </thead>
             <tbody>
               {filteredLines.map((line) => (
                 <tr key={line.supply_line_id} className="border-t border-panel-border">
-                  <td className="py-1 text-foreground/50">{line.source_name}</td>
-                  <td className="py-1 text-foreground/50">{line.target_name}</td>
-                  <td className="py-1 text-foreground/40 uppercase">{line.supply_type}</td>
-                  <td className="py-1 text-right" style={{ color: line.faction === "allied" ? CYAN : RED }}>
-                    {line.tonnage_per_day.toLocaleString()}
+                  <td className="py-1" style={{ color: supplyTypeColor(line.supply_type) }}>{line.source_name}</td>
+                  <td className="py-1" style={{ color: supplyTypeColor(line.supply_type) }}>{line.target_name}</td>
+                  <td className="py-1 uppercase" style={{ color: supplyTypeColor(line.supply_type) }}>
+                    {line.supply_type}
                   </td>
                   <td className="py-1 text-right uppercase" style={{ color: statusColor(line.status) }}>
                     {line.status}
+                  </td>
+                  <td className="py-1 text-right" style={{ color: line.faction === "allied" ? CYAN : RED }}>
+                    {line.tonnage_per_day.toLocaleString()}
                   </td>
                 </tr>
               ))}

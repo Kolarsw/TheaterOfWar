@@ -39,7 +39,7 @@ function formatDateForScale(iso: string, scale: TimeScale): string {
 const CYAN = "#00d4ff";
 const AMBER = "#ffaa00";
 
-export default function TimelineScrubber() {
+export default function TimelineScrubber({ embedded = false }: { embedded?: boolean }) {
   const {
     currentDate, isPlaying, playbackSpeed, timeScale, warStart, warEnd,
     setCurrentDate, togglePlayback, setPlaybackSpeed, setTimeScale, mode,
@@ -47,7 +47,8 @@ export default function TimelineScrubber() {
 
   const activeView = useAppStore((s) => s.activeView);
   const zoom = useAppStore((s) => s.mapZoom);
-  const hasBottomPanel = activeView === "logistics" || activeView === "theaters" || activeView === "battles";
+
+  const hasBottomPanel = !embedded && (activeView === "theaters" || activeView === "battles");
 
   const animRef = useRef<number | null>(null);
   const lastTickRef = useRef<number>(0);
@@ -121,6 +122,54 @@ export default function TimelineScrubber() {
   };
 
   const scaleIdx = timeScales.indexOf(timeScale);
+
+  // When logistics view is active, the standalone (non-embedded) scrubber hides
+  // because LogisticsOverlay renders its own embedded copy
+  if (!embedded && activeView === "logistics") return null;
+
+  if (embedded) {
+    return (
+      <div>
+        {zoom >= 6 && (
+          <p className="text-[10px] font-mono text-foreground/40 italic max-w-xs mb-2">
+            {zoom < 10
+              ? "Operational-level data. Some positions interpolated."
+              : "Tactical-level data. Positions and unit details are estimated where primary sources are unavailable."}
+          </p>
+        )}
+        <style>{sliderStyle}</style>
+        <div
+          className="bg-panel/35 backdrop-blur-sm rounded-lg px-4 py-2.5"
+          style={{ border: `2px solid ${borderColor}` }}
+        >
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-mono tracking-widest uppercase" style={{ color: accent, opacity: 0.6 }}>Timeline</span>
+            <span className="text-xs font-mono tracking-wide" style={{ color: accent, opacity: 0.8 }}>{formatDateForScale(currentDate, timeScale)}</span>
+          </div>
+          <div className="flex items-center gap-2 mb-2">
+            <button onClick={() => { const ms = Math.max(new Date(currentDate).getTime() - msPerTick[timeScale], warStart); setCurrentDate(new Date(ms).toISOString()); }} className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80" style={{ border: `1px solid ${borderColor}` }} aria-label="Step back one unit">−</button>
+            <div className="relative flex-1">
+              <input type="range" min="0" max="1" step="0.0001" value={progress} onChange={handleSliderChange} className="timeline-slider w-full h-1 appearance-none bg-panel-border rounded-full cursor-pointer" aria-label="Timeline position" />
+              <div className="absolute top-1/2 left-0 h-1 rounded-full pointer-events-none -translate-y-1/2" style={{ width: `${progress * 100}%`, backgroundColor: accent, opacity: 0.3 }} />
+            </div>
+            <button onClick={() => { const ms = Math.min(new Date(currentDate).getTime() + msPerTick[timeScale], warEnd); setCurrentDate(new Date(ms).toISOString()); }} className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80" style={{ border: `1px solid ${borderColor}` }} aria-label="Step forward one unit">+</button>
+          </div>
+          <div className="flex items-center gap-2 mb-2">
+            <button onClick={togglePlayback} className="w-7 h-7 rounded flex items-center justify-center transition-colors" style={{ border: `1px solid ${accent}`, color: accent }} aria-label={isPlaying ? "Pause" : "Play"}><span className="text-xs font-mono">{isPlaying ? "⏸" : "▶"}</span></button>
+            {speeds.map((s) => (<button key={s} onClick={() => setPlaybackSpeed(s)} className="w-7 h-7 rounded flex items-center justify-center text-xs font-mono transition-colors" style={{ border: `1px solid ${playbackSpeed === s ? accent : 'rgba(255,255,255,0.1)'}`, color: playbackSpeed === s ? accent : 'rgba(255,255,255,0.4)', backgroundColor: playbackSpeed === s ? `${accent}15` : 'transparent' }} aria-label={`Set speed to ${s}x`}>{s}x</button>))}
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-mono tracking-widest uppercase" style={{ color: accent, opacity: 0.4 }}>Scale</span>
+            <div className="flex items-center gap-2">
+              <button onClick={() => scaleIdx > 0 && setTimeScale(timeScales[scaleIdx - 1])} className={`text-xs font-mono px-1.5 py-0.5 rounded ${scaleIdx > 0 ? "text-foreground/50 hover:text-foreground/80" : "text-foreground/20"}`} disabled={scaleIdx === 0} aria-label="Zoom in timeline">−</button>
+              <span className="text-xs font-mono text-foreground/50 w-14 text-center uppercase">{timeScale}</span>
+              <button onClick={() => scaleIdx < timeScales.length - 1 && setTimeScale(timeScales[scaleIdx + 1])} className={`text-xs font-mono px-1.5 py-0.5 rounded ${scaleIdx < timeScales.length - 1 ? "text-foreground/50 hover:text-foreground/80" : "text-foreground/20"}`} disabled={scaleIdx === timeScales.length - 1} aria-label="Zoom out timeline">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`absolute z-20 w-[460px] ${
