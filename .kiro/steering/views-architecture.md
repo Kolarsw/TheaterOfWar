@@ -13,7 +13,7 @@ The app is structured around distinct views, each providing a different lens on 
 ---
 
 ## View 1: Strategic Command (Default — Globe Map)
-The main view. Full-screen globe/map with the timeline scrubber at the bottom.
+The operational overview. You're a general looking at the big picture — where are the forces, what's the supply situation, what's contested.
 
 ### Top KPI Bar
 Horizontal row of stat cards that update as the timeline scrubs:
@@ -31,9 +31,15 @@ Horizontal row of stat cards that update as the timeline scrubs:
 - Scatterplot Layer: battles/events
 
 ### Panels
-- Left: Order of Battle tree (collapsible)
-- Right: Detail panel (selected unit/event info)
+- Left: OOB tree — **defaults to collapsed** on Command. Expandable for quick unit lookup and map navigation. Minimal footprint to leave room for future panels (event feed, alerts, etc.)
+- Right: Layer toggles + detail panel (selected unit/event info)
 - Bottom: Timeline scrubber (play/pause, speed, date range)
+
+### Key Behavior
+- OOB tree on Command is a lightweight navigation aid, not a management tool
+- Clicking a unit in the tree selects it on the map and shows the detail panel
+- Double-clicking flies to the unit's location
+- Troop numbers in the tree update live as the timeline progresses
 
 ---
 
@@ -55,25 +61,28 @@ Dedicated supply chain health view. Inspired by the Palantir "Common Operating P
 ---
 
 ## View 3: Order of Battle / Force Composition
-Hierarchical view of military organization and unit readiness.
+The force management view. Granular organizational structure, unit readiness, equipment breakdowns, and command chain management. Less map-centric, more data-dense.
 
 ### Layout
-- **Left:** Interactive tree — Army Group → Army → Corps → Division → Regiment
+- **Left:** Full interactive tree — Army Group → Army → Corps → Division → Regiment → Battalion → Company
   - Each node shows: unit name, strength %, supply level, combat effectiveness
   - Color-coded health indicators (green/amber/red)
-  - Click to select, double-click to expand
+  - Click to select, double-click to fly to on map
+  - **Defaults to expanded** (unlike Command where it's collapsed)
 - **Center:** Map zoomed to selected unit's location with subordinate units visible
-- **Right:** Detail panel for selected unit
+- **Right:** Rich detail panel for selected unit
   - Personnel strength (current vs authorized)
-  - Equipment status (tanks, artillery, vehicles)
-  - Supply levels by type
+  - Equipment status (tanks, artillery, vehicles — table format)
+  - Supply levels by type (ammo, fuel, food, medical — bar charts)
   - Morale score
-  - Recent engagements
-  - Command chain (parent + subordinate units)
+  - Recent engagements list
+  - Command chain (parent + subordinate units, clickable)
+  - Readiness comparison vs sibling units
 
 ### Simulation Mode Additions
 - Drag-and-drop unit reassignment between commands
 - Troop reinforcement sliders (adjust division strength)
+- Equipment reallocation between units
 - "What if this unit wasn't here?" toggle to remove units and see front-line impact
 
 ---

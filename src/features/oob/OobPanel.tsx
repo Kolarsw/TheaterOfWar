@@ -126,13 +126,13 @@ function TreeNode({ node, depth, accent, borderColor }: {
   );
 }
 
-export default function OobPanel() {
+export default function OobPanel({ defaultCollapsed = false }: { defaultCollapsed?: boolean }) {
   const mode = useAppStore((s) => s.mode);
   const accent = mode === "historical" ? CYAN : AMBER;
   const borderColor = mode === "historical"
     ? "rgba(0, 212, 255, 0.35)"
     : "rgba(255, 170, 0, 0.35)";
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(defaultCollapsed);
 
   // Combine all units with echelon info
   const allUnitsWithEchelon = useMemo(() => {
@@ -175,14 +175,20 @@ export default function OobPanel() {
 
   if (collapsed) {
     return (
-      <div className="absolute top-4 left-4 z-10 mt-14">
-        <button
+      <div className="absolute top-4 left-4 z-10 mt-14 w-72">
+        <div
+          className="bg-panel/35 backdrop-blur-sm rounded-lg px-3 py-2 flex items-center justify-between cursor-pointer transition-colors hover:bg-white/5"
+          style={{ border: `2px solid ${borderColor}` }}
           onClick={() => setCollapsed(false)}
-          className="bg-panel/35 backdrop-blur-sm rounded-lg px-3 py-2 text-[10px] font-mono tracking-widest uppercase transition-colors hover:bg-white/5"
-          style={{ border: `2px solid ${borderColor}`, color: accent }}
         >
-          OOB ▶
-        </button>
+          <span
+            className="text-[10px] font-mono tracking-widest uppercase"
+            style={{ color: accent }}
+          >
+            Order of Battle
+          </span>
+          <span className="text-[10px] font-mono text-foreground/30">▶</span>
+        </div>
       </div>
     );
   }

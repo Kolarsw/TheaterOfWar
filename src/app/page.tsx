@@ -6,6 +6,7 @@ import GlobeMap from "@/features/map/GlobeMap";
 import ViewOverlay from "@/components/ViewOverlay";
 import StrategicCommandOverlay from "@/features/strategic-command/StrategicCommandOverlay";
 import OobPanel from "@/features/oob/OobPanel";
+import OobDetailPanel from "@/features/oob/OobDetailPanel";
 import LayerToggles from "@/components/LayerToggles";
 import UnitDetailPanel from "@/components/UnitDetailPanel";
 import TimelineScrubber from "@/components/TimelineScrubber";
@@ -31,14 +32,15 @@ export default function Home() {
         {/* Strategic Command overlay — KPIs + unit detail */}
         {activeView === "strategic-command" && <StrategicCommandOverlay />}
 
-        {/* OOB Panel — visible on strategic-command and oob views */}
-        {(activeView === "strategic-command" || activeView === "oob") && <OobPanel />}
+        {/* OOB Panel — collapsed by default on command, expanded on oob */}
+        {activeView === "strategic-command" && <OobPanel defaultCollapsed={true} />}
+        {activeView === "oob" && <OobPanel defaultCollapsed={false} />}
 
         {/* Layer toggles — visible on map views */}
         {(activeView === "strategic-command" || activeView === "logistics" || activeView === "oob") && <LayerToggles />}
 
-        {/* Unit detail panel — shows on any view when a unit is selected */}
-        <UnitDetailPanel />
+        {/* Unit detail panel — lite on command, rich on oob */}
+        {activeView === "oob" ? <OobDetailPanel /> : <UnitDetailPanel />}
 
         {/* Timeline scrubber — always visible */}
         <TimelineScrubber />

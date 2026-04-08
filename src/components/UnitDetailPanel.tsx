@@ -8,6 +8,7 @@ import axisHierarchicalUnits from "@/data/mock-units-axis-hierarchical.json";
 
 const CYAN = "#00d4ff";
 const AMBER = "#ffaa00";
+const RED = "#ff3344";
 
 interface Unit {
   unit_id: string;
@@ -54,6 +55,8 @@ export default function UnitDetailPanel() {
 
   if (!selectedUnit) return null;
 
+  const factionColor = selectedUnit.faction === "allied" ? CYAN : RED;
+
   return (
     <div className="absolute top-2 right-4 z-10 w-72 mt-40">
       <div
@@ -62,19 +65,19 @@ export default function UnitDetailPanel() {
       >
         <h2
           className="text-xs font-mono tracking-widest uppercase mb-3"
-          style={{ color: accent }}
+          style={{ color: factionColor }}
         >
           {selectedUnit.unit_name}
         </h2>
         <div className="space-y-2">
-          <StatRow label="Faction" value={selectedUnit.faction.toUpperCase()} accent={accent} />
-          <StatRow label="Type" value={selectedUnit.unit_type.toUpperCase()} accent={accent} />
-          <StatRow label="Troops" value={selectedUnit.troop_count.toLocaleString()} accent={accent} />
-          <StatRow label="Strength" value={`${selectedUnit.strength_percent}%`} accent={accent} />
-          <StatRow label="Supply" value={`${selectedUnit.supply_level}%`} accent={accent} />
-          <StatRow label="Combat Eff." value={`${selectedUnit.combat_effectiveness}%`} accent={accent} />
-          <StatRow label="Morale" value={`${selectedUnit.morale}%`} accent={accent} />
-          <StatRow label="Position" value={`${selectedUnit.lat.toFixed(2)}°N, ${Math.abs(selectedUnit.lng).toFixed(2)}°W`} accent={accent} />
+          <StatRow label="Faction" value={selectedUnit.faction.toUpperCase()} accent={factionColor} />
+          <StatRow label="Type" value={selectedUnit.unit_type.toUpperCase()} accent={factionColor} />
+          <StatRow label="Troops" value={selectedUnit.troop_count.toLocaleString()} accent={factionColor} />
+          <StatRow label="Strength" value={`${selectedUnit.strength_percent}%`} accent={factionColor} />
+          <StatRow label="Supply" value={`${selectedUnit.supply_level}%`} accent={factionColor} />
+          <StatRow label="Combat Eff." value={`${selectedUnit.combat_effectiveness}%`} accent={factionColor} />
+          <StatRow label="Morale" value={`${selectedUnit.morale}%`} accent={factionColor} />
+          <StatRow label="Position" value={`${selectedUnit.lat.toFixed(2)}°N, ${Math.abs(selectedUnit.lng).toFixed(2)}°W`} accent={factionColor} />
         </div>
       </div>
     </div>

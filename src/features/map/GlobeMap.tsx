@@ -20,6 +20,24 @@ const allUnits = [
   ...axisUnits.filter((u) => !hierarchicalIds.has(u.unit_id)),
 ];
 
+// Build a parent lookup: unit_id → root division unit_id
+const allHierarchical = [...hierarchicalUnits, ...axisHierarchicalUnits];
+const parentMap = new Map<string, string | null>();
+allHierarchical.forEach((u) => parentMap.set(u.unit_id, (u as any).parent_unit_id || null));
+
+function getRootDivision(unitId: string): string {
+  let current = unitId;
+  let parent = parentMap.get(current);
+  while (parent) {
+    current = parent;
+    parent = parentMap.get(current);
+  }
+  return current;
+}
+
+// Equipment data unit IDs
+const equipIds = new Set(["us-1id", "de-352id", "de-21pz"]);
+
 // Scale: 1 point per ~500 troops, spread around the unit's position
 function generateTroopPoints(beforeDate?: string): GeoJSON.FeatureCollection {
   const features: GeoJSON.Feature[] = [];
@@ -50,6 +68,7 @@ function generateTroopPoints(beforeDate?: string): GeoJSON.FeatureCollection {
           troop_count: u.troop_count,
           strength_percent: u.strength_percent,
           point_troops: Math.round(u.troop_count / pointCount),
+          root_division_id: getRootDivision(u.unit_id),
         },
       });
     }
@@ -239,9 +258,31 @@ export default function GlobeMap() {
 
       // --- Interactions ---
 
-      // Click cluster to zoom in
+      // Click cluster — selectable only if all points share the same root division
       map.current.on("click", "clusters", (e) => {
         if (!map.current || !e.features?.[0]) return;
+        const props = e.features[0].properties;
+        const pointCount = Number(props?.point_count || 0);
+        if (pointCount > 100) return; // Too big, definitely mixed
+
+        const clusterId = props?.cluster_id;
+        const source = map.current.getSource("units") as mapboxgl.GeoJSONSource;
+        (source as any).getClusterLeaves(clusterId, Math.min(pointCount, 100), 0, (err: any, leaves: any[]) => {
+          if (err || !leaves?.length) return;
+          const rootIds = new Set(leaves.map((l: any) => l.properties?.root_division_id));
+          if (rootIds.size === 1) {
+            // All from same division family — select the root division
+            const rootId = [...rootIds][0];
+            useAppStore.getState().setSelectedUnitId(rootId);
+          }
+          // Mixed cluster — do nothing on click, user must dbl-click to zoom
+        });
+      });
+
+      // Double-click cluster to zoom in
+      map.current.on("dblclick", "clusters", (e) => {
+        if (!map.current || !e.features?.[0]) return;
+        e.preventDefault();
         const clusterId = e.features[0].properties?.cluster_id;
         const coords = (e.features[0].geometry as GeoJSON.Point).coordinates.slice() as [number, number];
         const source = map.current.getSource("units") as mapboxgl.GeoJSONSource;
@@ -261,6 +302,14 @@ export default function GlobeMap() {
         }
       });
 
+      // Double-click unclustered triangle to zoom in
+      map.current.on("dblclick", "unclustered-triangles", (e) => {
+        if (!map.current || !e.features?.[0]) return;
+        e.preventDefault();
+        const coords = (e.features[0].geometry as GeoJSON.Point).coordinates.slice() as [number, number];
+        map.current.flyTo({ center: coords, zoom: map.current.getZoom() + 3, duration: 1500 });
+      });
+
       // Hover on clusters
       map.current.on("mouseenter", "clusters", (e) => {
         if (!map.current) return;
@@ -269,21 +318,47 @@ export default function GlobeMap() {
           const props = e.features[0].properties;
           const coords = (e.features[0].geometry as GeoJSON.Point).coordinates.slice() as [number, number];
           const troops = Number(props?.total_troops || 0);
-          const points = Number(props?.point_count || 0);
+          const clusterId = props?.cluster_id;
+          const source = map.current.getSource("units") as mapboxgl.GeoJSONSource;
+          const mapRef = map.current;
 
-          popupRef.current?.remove();
-          popupRef.current = new mapboxgl.Popup({
-            closeButton: false, closeOnClick: false,
-            className: "unit-tooltip", offset: 12,
-          })
-            .setLngLat(coords)
-            .setHTML(
-              `<div style="font-family:monospace;font-size:11px;color:#e0e0e0;padding:2px 4px;">
-                <strong>${troops.toLocaleString()} troops</strong><br/>
-                ${points} sub-groups · Click to zoom
-              </div>`
-            )
-            .addTo(map.current);
+          // Get unique unit names from cluster leaves
+          const leafCount = Math.min(Number(props?.point_count || 0), 200);
+          (source as any).getClusterLeaves(clusterId, leafCount, 0, (err: any, leaves: any[]) => {
+            if (err || !leaves?.length || !mapRef) return;
+            const unitNames = [...new Set(leaves.map((l: any) => l.properties?.unit_name))];
+            const rootIds = new Set(leaves.map((l: any) => l.properties?.root_division_id));
+            const isSingleFamily = rootIds.size === 1;
+
+            const unitList = unitNames.slice(0, 6).map((name: string) => {
+              const leaf = leaves.find((l: any) => l.properties?.unit_name === name);
+              const faction = leaf?.properties?.faction;
+              const unitId = leaf?.properties?.unit_id;
+              const hasEquip = equipIds.has(unitId) || equipIds.has(leaf?.properties?.root_division_id);
+              const color = faction === "allied" ? "#00d4ff" : "#ff3344";
+              return `<span style="color:${color}">· ${name}${hasEquip ? " ★" : ""}</span>`;
+            }).join("<br/>");
+            const more = unitNames.length > 6 ? `<br/><span style="color:rgba(255,255,255,0.3)">+${unitNames.length - 6} more</span>` : "";
+            const clickHint = isSingleFamily
+              ? `<span style="color:rgba(255,255,255,0.3)">Click to see unit details<br/>Dbl-click to zoom</span>`
+              : `<span style="color:rgba(255,255,255,0.3)">Dbl-click to zoom</span>`;
+            const equipHint = unitList.includes("★") ? `<br/><span style="color:rgba(255,255,255,0.3)">★ = equipment data</span>` : "";
+
+            popupRef.current?.remove();
+            popupRef.current = new mapboxgl.Popup({
+              closeButton: false, closeOnClick: false,
+              className: "unit-tooltip", offset: 12,
+            })
+              .setLngLat(coords)
+              .setHTML(
+                `<div style="font-family:monospace;font-size:11px;color:#e0e0e0;padding:2px 4px;">
+                  <strong>${troops.toLocaleString()} troops</strong><br/>
+                  ${unitList}${more}<br/>
+                  ${clickHint}${equipHint}
+                </div>`
+              )
+              .addTo(mapRef);
+          });
         }
       });
 
@@ -306,7 +381,8 @@ export default function GlobeMap() {
                 <strong>${props?.unit_name}</strong><br/>
                 <span style="color:${props?.faction === 'allied' ? '#00d4ff' : '#ff3344'}">${props?.unit_type?.toUpperCase()}</span>
                 &nbsp;·&nbsp;~${Number(props?.point_troops).toLocaleString()} troops
-                &nbsp;·&nbsp;STR ${props?.strength_percent}%
+                &nbsp;·&nbsp;STR ${props?.strength_percent}%<br/>
+                <span style="color:rgba(255,255,255,0.3)">Click to see unit details<br/>Dbl-click to zoom</span>
               </div>`
             )
             .addTo(map.current);

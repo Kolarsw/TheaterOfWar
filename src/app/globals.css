@@ -66,3 +66,12 @@ body {
   border-top-color: rgba(18, 18, 26, 0.95) !important;
   border-bottom-color: rgba(18, 18, 26, 0.95) !important;
 }
+
+/* Hide scrollbars but keep scrolling */
+.overflow-y-auto {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}

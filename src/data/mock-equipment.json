@@ -1,0 +1,56 @@
+{
+  "us-1id": {
+    "personnel": { "authorized": 15514, "current": 15000 },
+    "equipment": {
+      "M1 Garand Rifles": { "authorized": 6500, "operational": 6200 },
+      "M1 Carbines": { "authorized": 2000, "operational": 1850 },
+      "M1919 MGs": { "authorized": 236, "operational": 220 },
+      "M2 60mm Mortars": { "authorized": 90, "operational": 85 },
+      "M1 81mm Mortars": { "authorized": 54, "operational": 50 },
+      "M2 105mm Howitzers": { "authorized": 36, "operational": 34 },
+      "M1 155mm Howitzers": { "authorized": 12, "operational": 12 },
+      "M4 Sherman Tanks": { "authorized": 0, "operational": 0 },
+      "2.5-ton Trucks": { "authorized": 400, "operational": 365 },
+      "Jeeps": { "authorized": 510, "operational": 480 }
+    },
+    "supply_breakdown": { "ammunition": 82, "fuel": 75, "food": 90, "medical": 88 },
+    "recent_engagements": ["Omaha Beach Landing", "Advance to Caumont"],
+    "command_chain": { "parent": "V Corps", "subordinates": ["16th Infantry Rgt", "18th Infantry Rgt", "26th Infantry Rgt"] }
+  },
+  "de-352id": {
+    "personnel": { "authorized": 15000, "current": 12700 },
+    "equipment": {
+      "Kar98k Rifles": { "authorized": 6000, "operational": 5100 },
+      "MP40 SMGs": { "authorized": 800, "operational": 680 },
+      "MG42 MGs": { "authorized": 300, "operational": 255 },
+      "8cm Mortars": { "authorized": 72, "operational": 60 },
+      "10.5cm leFH 18": { "authorized": 36, "operational": 28 },
+      "15cm sFH 18": { "authorized": 12, "operational": 10 },
+      "7.5cm PaK 40": { "authorized": 24, "operational": 18 },
+      "StuG III": { "authorized": 14, "operational": 12 },
+      "Trucks (mixed)": { "authorized": 300, "operational": 210 },
+      "Horse-drawn wagons": { "authorized": 450, "operational": 400 }
+    },
+    "supply_breakdown": { "ammunition": 65, "fuel": 48, "food": 72, "medical": 60 },
+    "recent_engagements": ["Defense of Omaha Beach", "Counterattack at Colleville"],
+    "command_chain": { "parent": "LXXXIV Corps", "subordinates": ["914th Grenadier Rgt", "916th Grenadier Rgt", "726th Grenadier Rgt"] }
+  },
+  "de-21pz": {
+    "personnel": { "authorized": 17000, "current": 16000 },
+    "equipment": {
+      "Kar98k Rifles": { "authorized": 4500, "operational": 4100 },
+      "MP40 SMGs": { "authorized": 1200, "operational": 1050 },
+      "MG42 MGs": { "authorized": 280, "operational": 250 },
+      "Pz IV Tanks": { "authorized": 98, "operational": 86 },
+      "StuG III": { "authorized": 24, "operational": 22 },
+      "Marder III": { "authorized": 12, "operational": 10 },
+      "8.8cm FlaK": { "authorized": 18, "operational": 16 },
+      "Sd.Kfz 251 Halftracks": { "authorized": 120, "operational": 98 },
+      "Trucks (mixed)": { "authorized": 500, "operational": 380 },
+      "Motorcycles": { "authorized": 200, "operational": 165 }
+    },
+    "supply_breakdown": { "ammunition": 60, "fuel": 42, "food": 68, "medical": 55 },
+    "recent_engagements": ["Counterattack toward Sword Beach", "Engagement at Périers Ridge"],
+    "command_chain": { "parent": "LXXXIV Corps", "subordinates": ["100th Panzergrenadier Rgt", "125th Panzergrenadier Rgt", "22nd Panzer Rgt"] }
+  }
+}
