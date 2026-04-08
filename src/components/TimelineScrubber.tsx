@@ -122,18 +122,18 @@ export default function TimelineScrubber() {
   const scaleIdx = timeScales.indexOf(timeScale);
 
   return (
-    <div className={`absolute z-20 w-[340px] ${
+    <div className={`absolute z-20 w-[460px] ${
       hasBottomPanel
         ? "bottom-[13rem] left-4"
         : "bottom-12 left-4"
     }`}>
       <style>{sliderStyle}</style>
       <div
-        className="bg-panel/35 backdrop-blur-sm rounded-lg px-4 py-4"
+        className="bg-panel/35 backdrop-blur-sm rounded-lg px-4 py-2.5"
         style={{ border: `2px solid ${borderColor}` }}
       >
         {/* Header: Timeline label + date */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-2">
           <span
             className="text-xs font-mono tracking-widest uppercase"
             style={{ color: accent, opacity: 0.6 }}
@@ -149,7 +149,7 @@ export default function TimelineScrubber() {
         </div>
 
         {/* Slider with step buttons */}
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-2">
           <button
             onClick={() => {
               const ms = Math.max(new Date(currentDate).getTime() - msPerTick[timeScale], warStart);
@@ -191,7 +191,7 @@ export default function TimelineScrubber() {
         </div>
 
         {/* Play + Speed squares row */}
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-2">
           <button
             onClick={togglePlayback}
             className="w-7 h-7 rounded flex items-center justify-center transition-colors"

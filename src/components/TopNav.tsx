@@ -48,7 +48,10 @@ export default function TopNav() {
       </div>
 
       {/* Center: Date Display */}
-      <div className="absolute left-1/2 -translate-x-1/2 text-xs font-mono text-foreground/50 tracking-widest">
+      <div
+        className="absolute left-1/2 -translate-x-1/2 text-sm font-mono tracking-widest"
+        style={{ color: mode === "historical" ? "#00d4ff" : "#ffaa00", opacity: 0.8 }}
+      >
         {formatDate(currentDate)}
       </div>
 

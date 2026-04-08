@@ -8,11 +8,12 @@ const AMBER = "#ffaa00";
 interface KpiCardProps {
   label: string;
   value: string | number;
+  valueColor?: string;
   subtext?: string;
   subtextColor?: string;
 }
 
-export default function KpiCard({ label, value, subtext, subtextColor }: KpiCardProps) {
+export default function KpiCard({ label, value, valueColor, subtext, subtextColor }: KpiCardProps) {
   const mode = useAppStore((s) => s.mode);
   const accent = mode === "historical" ? CYAN : AMBER;
   const borderColor = mode === "historical"
@@ -29,7 +30,7 @@ export default function KpiCard({ label, value, subtext, subtextColor }: KpiCard
       </p>
       <p
         className="text-lg font-mono font-semibold mt-0.5"
-        style={{ color: accent }}
+        style={{ color: valueColor || accent }}
       >
         {value}
       </p>

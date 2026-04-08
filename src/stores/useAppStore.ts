@@ -16,6 +16,15 @@ export type TimeScale = "hours" | "days" | "weeks" | "months" | "years";
 const WAR_START = new Date("1939-09-01T00:00:00Z").getTime();
 const WAR_END = new Date("1945-09-02T00:00:00Z").getTime();
 
+export type LayerKey = "units" | "supplyArcs" | "hexControl" | "events";
+
+interface VisibleLayers {
+  units: boolean;
+  supplyArcs: boolean;
+  hexControl: boolean;
+  events: boolean;
+}
+
 interface AppState {
   activeView: ViewId;
   mode: AppMode;
@@ -26,6 +35,8 @@ interface AppState {
   warStart: number;
   warEnd: number;
   selectedUnitId: string | null;
+  flyToTarget: { lng: number; lat: number; zoom: number } | null;
+  visibleLayers: VisibleLayers;
   setActiveView: (view: ViewId) => void;
   setMode: (mode: AppMode) => void;
   setCurrentDate: (date: string) => void;
@@ -36,6 +47,8 @@ interface AppState {
   setTimeScale: (scale: TimeScale) => void;
   cyclePlaybackSpeed: () => void;
   setSelectedUnitId: (id: string | null) => void;
+  flyTo: (lng: number, lat: number, zoom?: number) => void;
+  toggleLayer: (layer: LayerKey) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -48,6 +61,8 @@ export const useAppStore = create<AppState>((set) => ({
   warStart: WAR_START,
   warEnd: WAR_END,
   selectedUnitId: null,
+  flyToTarget: null,
+  visibleLayers: { units: true, supplyArcs: true, hexControl: false, events: true },
   setActiveView: (view) => set({ activeView: view }),
   setMode: (mode) => set({ mode }),
   setCurrentDate: (date) => set({ currentDate: date }),
@@ -66,4 +81,12 @@ export const useAppStore = create<AppState>((set) => ({
       return { playbackSpeed: speeds[(idx + 1) % speeds.length] };
     }),
   setSelectedUnitId: (id) => set({ selectedUnitId: id }),
+  flyTo: (lng, lat, zoom = 10) => set({ flyToTarget: { lng, lat, zoom } }),
+  toggleLayer: (layer) =>
+    set((state) => ({
+      visibleLayers: {
+        ...state.visibleLayers,
+        [layer]: !state.visibleLayers[layer],
+      },
+    })),
 }));

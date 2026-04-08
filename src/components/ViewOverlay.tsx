@@ -62,7 +62,7 @@ export default function ViewOverlay() {
       </div>
 
       {/* Left panel placeholder */}
-      {activeView !== "strategic-command" && (
+      {activeView !== "strategic-command" && activeView !== "oob" && (
         <div className="absolute top-4 left-4 z-10 mt-14 w-72 max-h-[calc(100%-6rem)] overflow-y-auto">
           <div
             className="bg-panel/35 backdrop-blur-sm rounded-lg p-4"
@@ -87,8 +87,8 @@ export default function ViewOverlay() {
       )}
 
       {/* Right panel placeholder */}
-      {activeView !== "strategic-command" && (
-        <div className="absolute top-4 right-14 z-10 w-72 max-h-[calc(100%-6rem)] overflow-y-auto">
+      {activeView !== "strategic-command" && activeView !== "oob" && (
+        <div className="absolute top-48 right-4 z-10 w-72 max-h-[calc(100%-14rem)] overflow-y-auto">
           <div
             className="bg-panel/35 backdrop-blur-sm rounded-lg p-4"
             style={{ border: `2px solid ${borderColor}` }}
