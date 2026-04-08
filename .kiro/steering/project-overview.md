@@ -33,8 +33,10 @@ Data pipelines that feed the front end with real historical data.
 
 ### Phase 3 — The Integration ("The Nervous System")
 Replace mock data with live Databricks queries.
+- Data Service Layer abstracts the swap — components call service functions, not data files
 - Databricks SQL Statement Execution API for analytical queries
 - Databricks Model Serving for predictive endpoints (optional)
+- H3 hex-based troop distribution replaces client-side point generation
 - Zustand-based async state management for smooth timeline scrubbing
 
 ## Current Phase: Phase 1

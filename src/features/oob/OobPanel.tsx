@@ -2,48 +2,11 @@
 
 import { useState, useMemo } from "react";
 import { useAppStore } from "@/stores/useAppStore";
-import hierarchicalUnits from "@/data/mock-units-hierarchical.json";
-import alliedUnits from "@/data/mock-units.json";
-import axisUnits from "@/data/mock-units-axis.json";
-import axisHierarchicalUnits from "@/data/mock-units-axis-hierarchical.json";
+import { getUnitHierarchy, UnitNode } from "@/services/dataService";
 
 const CYAN = "#00d4ff";
 const AMBER = "#ffaa00";
 const RED = "#ff3344";
-
-interface UnitNode {
-  unit_id: string;
-  unit_name: string;
-  faction: string;
-  unit_type: string;
-  echelon?: string;
-  parent_unit_id: string | null;
-  troop_count: number;
-  strength_percent: number;
-  lat: number;
-  lng: number;
-  children: UnitNode[];
-}
-
-function buildTree(units: UnitNode[]): UnitNode[] {
-  const map = new Map<string, UnitNode>();
-  const roots: UnitNode[] = [];
-
-  units.forEach((u) => {
-    map.set(u.unit_id, { ...u, children: [] });
-  });
-
-  units.forEach((u) => {
-    const node = map.get(u.unit_id)!;
-    if (u.parent_unit_id && map.has(u.parent_unit_id)) {
-      map.get(u.parent_unit_id)!.children.push(node);
-    } else {
-      roots.push(node);
-    }
-  });
-
-  return roots;
-}
 
 function TreeNode({ node, depth, accent, borderColor }: {
   node: UnitNode;
@@ -134,44 +97,7 @@ export default function OobPanel({ defaultCollapsed = false }: { defaultCollapse
     : "rgba(255, 170, 0, 0.35)";
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
 
-  // Combine all units with echelon info
-  const allUnitsWithEchelon = useMemo(() => {
-    const hierarchical = [...hierarchicalUnits, ...axisHierarchicalUnits].map((u) => ({
-      ...u,
-      echelon: u.echelon || "division",
-      children: [] as UnitNode[],
-    }));
-
-    // Add non-hierarchical units as top-level divisions
-    const hierarchicalIds = new Set([...hierarchicalUnits, ...axisHierarchicalUnits].map((u) => u.unit_id));
-    const otherAllied = alliedUnits
-      .filter((u) => !hierarchicalIds.has(u.unit_id))
-      .map((u) => ({
-        ...u,
-        echelon: "division",
-        parent_unit_id: null,
-        children: [] as UnitNode[],
-      }));
-    const otherAxis = axisUnits
-      .filter((u) => !hierarchicalIds.has(u.unit_id))
-      .map((u) => ({
-        ...u,
-        echelon: "division",
-        parent_unit_id: null,
-        children: [] as UnitNode[],
-      }));
-
-    return [...hierarchical, ...otherAllied, ...otherAxis];
-  }, []);
-
-  const alliedTree = useMemo(
-    () => buildTree(allUnitsWithEchelon.filter((u) => u.faction === "allied")),
-    [allUnitsWithEchelon]
-  );
-  const axisTree = useMemo(
-    () => buildTree(allUnitsWithEchelon.filter((u) => u.faction === "axis")),
-    [allUnitsWithEchelon]
-  );
+  const { allied: alliedTree, axis: axisTree } = useMemo(() => getUnitHierarchy(), []);
 
   if (collapsed) {
     return (

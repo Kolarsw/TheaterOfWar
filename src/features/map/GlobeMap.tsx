@@ -4,78 +4,9 @@ import { useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useAppStore } from "@/stores/useAppStore";
-import alliedUnits from "@/data/mock-units.json";
-import axisUnits from "@/data/mock-units-axis.json";
-import hierarchicalUnits from "@/data/mock-units-hierarchical.json";
-import axisHierarchicalUnits from "@/data/mock-units-axis-hierarchical.json";
+import { getTroopPoints, getRootDivisionId, hasEquipmentData } from "@/services/dataService";
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
-
-// Merge all units, preferring hierarchical data
-const hierarchicalIds = new Set([...hierarchicalUnits, ...axisHierarchicalUnits].map((u) => u.unit_id));
-const allUnits = [
-  ...hierarchicalUnits,
-  ...axisHierarchicalUnits,
-  ...alliedUnits.filter((u) => !hierarchicalIds.has(u.unit_id)),
-  ...axisUnits.filter((u) => !hierarchicalIds.has(u.unit_id)),
-];
-
-// Build a parent lookup: unit_id → root division unit_id
-const allHierarchical = [...hierarchicalUnits, ...axisHierarchicalUnits];
-const parentMap = new Map<string, string | null>();
-allHierarchical.forEach((u) => parentMap.set(u.unit_id, (u as any).parent_unit_id || null));
-
-function getRootDivision(unitId: string): string {
-  let current = unitId;
-  let parent = parentMap.get(current);
-  while (parent) {
-    current = parent;
-    parent = parentMap.get(current);
-  }
-  return current;
-}
-
-// Equipment data unit IDs
-const equipIds = new Set(["us-1id", "de-352id", "de-21pz"]);
-
-// Scale: 1 point per ~500 troops, spread around the unit's position
-function generateTroopPoints(beforeDate?: string): GeoJSON.FeatureCollection {
-  const features: GeoJSON.Feature[] = [];
-  const filtered = allUnits.filter(
-    (u) => !beforeDate || new Date(u.timestamp).getTime() <= new Date(beforeDate).getTime()
-  );
-
-  filtered.forEach((u) => {
-    const pointCount = Math.max(1, Math.round(u.troop_count / 500));
-    // Spread radius in degrees — larger units spread wider
-    const spread = Math.min(0.02, 0.002 + (u.troop_count / 500000));
-
-    for (let i = 0; i < pointCount; i++) {
-      // Distribute in a rough circle around the unit center
-      const angle = (i / pointCount) * Math.PI * 2 + (Math.random() * 0.3);
-      const dist = spread * Math.sqrt(Math.random());
-      const lng = u.lng + Math.cos(angle) * dist;
-      const lat = u.lat + Math.sin(angle) * dist;
-
-      features.push({
-        type: "Feature",
-        geometry: { type: "Point", coordinates: [lng, lat] },
-        properties: {
-          unit_id: u.unit_id,
-          unit_name: u.unit_name,
-          faction: u.faction,
-          unit_type: u.unit_type,
-          troop_count: u.troop_count,
-          strength_percent: u.strength_percent,
-          point_troops: Math.round(u.troop_count / pointCount),
-          root_division_id: getRootDivision(u.unit_id),
-        },
-      });
-    }
-  });
-
-  return { type: "FeatureCollection", features };
-}
 
 // Create triangle image for the map
 function createTriangleImage(map: mapboxgl.Map, id: string, color: string, size: number) {
@@ -94,7 +25,6 @@ function createTriangleImage(map: mapboxgl.Map, id: string, color: string, size:
   ctx.lineWidth = 1;
   ctx.globalAlpha = 0.6;
   ctx.stroke();
-
   const imageData = ctx.getImageData(0, 0, size, size);
   map.addImage(id, { width: size, height: size, data: new Uint8Array(imageData.data.buffer) });
 }
@@ -133,15 +63,13 @@ export default function GlobeMap() {
       map.current.setPaintProperty("land", "background-color", "#2a2a2a");
       map.current.setPaintProperty("water", "fill-color", "rgba(16, 24, 48, 0.75)");
 
-      // Create triangle icons
       createTriangleImage(map.current, "triangle-allied", "#00d4ff", 12);
       createTriangleImage(map.current, "triangle-axis", "#ff3344", 12);
 
-      // Clustered source — points merge at low zoom, break apart at high zoom
       const currentDate = useAppStore.getState().currentDate;
       map.current.addSource("units", {
         type: "geojson",
-        data: generateTroopPoints(currentDate),
+        data: getTroopPoints(currentDate),
         cluster: true,
         clusterMaxZoom: 14,
         clusterRadius: 40,
@@ -152,106 +80,58 @@ export default function GlobeMap() {
         },
       });
 
-      // --- CLUSTERED circles (zoomed out) ---
+      // Cluster glow
       map.current.addLayer({
         id: "clusters-glow",
         type: "circle",
         source: "units",
         filter: ["has", "point_count"],
         paint: {
-          "circle-radius": [
-            "interpolate", ["linear"], ["get", "total_troops"],
-            100, 8,
-            5000, 14,
-            15000, 22,
-            30000, 32
-          ],
-          "circle-color": [
-            "case",
-            [">", ["get", "allied_count"], ["get", "axis_count"]], "rgba(0, 212, 255, 0.12)",
-            "rgba(255, 51, 68, 0.12)"
-          ],
+          "circle-radius": ["interpolate", ["linear"], ["get", "total_troops"], 100, 8, 5000, 14, 15000, 22, 30000, 32],
+          "circle-color": ["case", [">", ["get", "allied_count"], ["get", "axis_count"]], "rgba(0, 212, 255, 0.12)", "rgba(255, 51, 68, 0.12)"],
           "circle-blur": 1,
         },
       });
 
+      // Cluster circles
       map.current.addLayer({
         id: "clusters",
         type: "circle",
         source: "units",
         filter: ["has", "point_count"],
         paint: {
-          "circle-radius": [
-            "interpolate", ["linear"], ["get", "total_troops"],
-            100, 5,
-            5000, 10,
-            15000, 16,
-            30000, 24
-          ],
-          "circle-color": [
-            "case",
-            [">", ["get", "allied_count"], ["get", "axis_count"]], "#00d4ff",
-            "#ff3344"
-          ],
+          "circle-radius": ["interpolate", ["linear"], ["get", "total_troops"], 100, 5, 5000, 10, 15000, 16, 30000, 24],
+          "circle-color": ["case", [">", ["get", "allied_count"], ["get", "axis_count"]], "#00d4ff", "#ff3344"],
           "circle-stroke-width": 1,
-          "circle-stroke-color": [
-            "case",
-            [">", ["get", "allied_count"], ["get", "axis_count"]], "rgba(0, 212, 255, 0.5)",
-            "rgba(255, 51, 68, 0.5)"
-          ],
-          "circle-opacity": [
-            "interpolate", ["linear"], ["get", "total_troops"],
-            0, 1,
-            1999, 1,
-            2000, 0.55,
-            20000, 0.4
-          ],
+          "circle-stroke-color": ["case", [">", ["get", "allied_count"], ["get", "axis_count"]], "rgba(0, 212, 255, 0.5)", "rgba(255, 51, 68, 0.5)"],
+          "circle-opacity": ["interpolate", ["linear"], ["get", "total_troops"], 0, 1, 1999, 1, 2000, 0.55, 20000, 0.4],
         },
       });
 
-      // Cluster troop count label
+      // Cluster labels
       map.current.addLayer({
         id: "cluster-count",
         type: "symbol",
         source: "units",
         filter: ["has", "point_count"],
         layout: {
-          "text-field": [
-            "concat",
-            ["case",
-              [">=", ["get", "total_troops"], 1000],
-              ["concat", ["to-string", ["round", ["/", ["get", "total_troops"], 1000]]], "k"],
-              ["to-string", ["get", "total_troops"]]
-            ]
-          ],
+          "text-field": ["concat", ["case", [">=", ["get", "total_troops"], 1000], ["concat", ["to-string", ["round", ["/", ["get", "total_troops"], 1000]]], "k"], ["to-string", ["get", "total_troops"]]]],
           "text-font": ["DIN Pro Medium", "Arial Unicode MS Bold"],
           "text-size": 10,
           "text-allow-overlap": true,
         },
-        paint: {
-          "text-color": "#ffffff",
-          "text-opacity": 0.8,
-        },
+        paint: { "text-color": "#ffffff", "text-opacity": 0.8 },
       });
 
-      // --- UNCLUSTERED points (zoomed in) — triangles ---
+      // Unclustered triangles
       map.current.addLayer({
         id: "unclustered-triangles",
         type: "symbol",
         source: "units",
         filter: ["!", ["has", "point_count"]],
         layout: {
-          "icon-image": [
-            "case",
-            ["==", ["get", "faction"], "allied"], "triangle-allied",
-            "triangle-axis"
-          ],
-          "icon-size": [
-            "interpolate", ["linear"], ["zoom"],
-            8, 0.6,
-            12, 1.0,
-            15, 1.4
-          ],
+          "icon-image": ["case", ["==", ["get", "faction"], "allied"], "triangle-allied", "triangle-axis"],
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 8, 0.6, 12, 1.0, 15, 1.4],
           "icon-allow-overlap": true,
         },
       });
@@ -263,7 +143,7 @@ export default function GlobeMap() {
         if (!map.current || !e.features?.[0]) return;
         const props = e.features[0].properties;
         const pointCount = Number(props?.point_count || 0);
-        if (pointCount > 100) return; // Too big, definitely mixed
+        if (pointCount > 100) return;
 
         const clusterId = props?.cluster_id;
         const source = map.current.getSource("units") as mapboxgl.GeoJSONSource;
@@ -271,15 +151,13 @@ export default function GlobeMap() {
           if (err || !leaves?.length) return;
           const rootIds = new Set(leaves.map((l: any) => l.properties?.root_division_id));
           if (rootIds.size === 1) {
-            // All from same division family — select the root division
             const rootId = [...rootIds][0];
             useAppStore.getState().setSelectedUnitId(rootId);
           }
-          // Mixed cluster — do nothing on click, user must dbl-click to zoom
         });
       });
 
-      // Double-click cluster to zoom in
+      // Double-click cluster to zoom
       map.current.on("dblclick", "clusters", (e) => {
         if (!map.current || !e.features?.[0]) return;
         e.preventDefault();
@@ -293,7 +171,7 @@ export default function GlobeMap() {
         });
       });
 
-      // Click unclustered triangle to select unit
+      // Click triangle to select
       map.current.on("click", "unclustered-triangles", (e) => {
         if (!e.features || e.features.length === 0) return;
         const props = e.features[0].properties;
@@ -302,7 +180,7 @@ export default function GlobeMap() {
         }
       });
 
-      // Double-click unclustered triangle to zoom in
+      // Double-click triangle to zoom
       map.current.on("dblclick", "unclustered-triangles", (e) => {
         if (!map.current || !e.features?.[0]) return;
         e.preventDefault();
@@ -310,7 +188,7 @@ export default function GlobeMap() {
         map.current.flyTo({ center: coords, zoom: map.current.getZoom() + 3, duration: 1500 });
       });
 
-      // Hover on clusters
+      // Hover on clusters — show unit list with selectability hint
       map.current.on("mouseenter", "clusters", (e) => {
         if (!map.current) return;
         map.current.getCanvas().style.cursor = "pointer";
@@ -322,7 +200,6 @@ export default function GlobeMap() {
           const source = map.current.getSource("units") as mapboxgl.GeoJSONSource;
           const mapRef = map.current;
 
-          // Get unique unit names from cluster leaves
           const leafCount = Math.min(Number(props?.point_count || 0), 200);
           (source as any).getClusterLeaves(clusterId, leafCount, 0, (err: any, leaves: any[]) => {
             if (err || !leaves?.length || !mapRef) return;
@@ -334,10 +211,11 @@ export default function GlobeMap() {
               const leaf = leaves.find((l: any) => l.properties?.unit_name === name);
               const faction = leaf?.properties?.faction;
               const unitId = leaf?.properties?.unit_id;
-              const hasEquip = equipIds.has(unitId) || equipIds.has(leaf?.properties?.root_division_id);
+              const hasEquip = hasEquipmentData(unitId);
               const color = faction === "allied" ? "#00d4ff" : "#ff3344";
               return `<span style="color:${color}">· ${name}${hasEquip ? " ★" : ""}</span>`;
             }).join("<br/>");
+
             const more = unitNames.length > 6 ? `<br/><span style="color:rgba(255,255,255,0.3)">+${unitNames.length - 6} more</span>` : "";
             const clickHint = isSingleFamily
               ? `<span style="color:rgba(255,255,255,0.3)">Click to see unit details<br/>Dbl-click to zoom</span>`
@@ -413,6 +291,7 @@ export default function GlobeMap() {
       });
     });
 
+    // Track zoom level
     map.current.on("zoom", () => {
       if (map.current) {
         useAppStore.getState().setMapZoom(map.current.getZoom());
@@ -439,14 +318,14 @@ export default function GlobeMap() {
         if (!map.current) return;
         const source = map.current.getSource("units") as mapboxgl.GeoJSONSource | undefined;
         if (source) {
-          source.setData(generateTroopPoints(state.currentDate));
+          source.setData(getTroopPoints(state.currentDate));
         }
       }
     });
     return unsub;
   }, []);
 
-  // Subscribe to layer toggle changes
+  // Subscribe to layer toggles
   useEffect(() => {
     let prevLayers = useAppStore.getState().visibleLayers;
     const unsub = useAppStore.subscribe((state) => {
@@ -454,8 +333,7 @@ export default function GlobeMap() {
         prevLayers = state.visibleLayers;
         if (!map.current) return;
         const visibility = state.visibleLayers.units ? "visible" : "none";
-        const layerIds = ["clusters", "clusters-glow", "cluster-count", "unclustered-triangles"];
-        layerIds.forEach((id) => {
+        ["clusters", "clusters-glow", "cluster-count", "unclustered-triangles"].forEach((id) => {
           if (map.current!.getLayer(id)) {
             map.current!.setLayoutProperty(id, "visibility", visibility);
           }
@@ -474,7 +352,6 @@ export default function GlobeMap() {
           zoom: state.flyToTarget.zoom,
           duration: 1500,
         });
-        // Clear the target so it doesn't re-trigger
         useAppStore.setState({ flyToTarget: null });
       }
     });
