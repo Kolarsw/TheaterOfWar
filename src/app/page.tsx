@@ -6,6 +6,7 @@ import GlobeMap from "@/features/map/GlobeMap";
 import ViewOverlay from "@/components/ViewOverlay";
 import StrategicCommandOverlay from "@/features/strategic-command/StrategicCommandOverlay";
 import LogisticsOverlay from "@/features/logistics/LogisticsOverlay";
+import BattleDetailOverlay from "@/features/battles/BattleDetailOverlay";
 import OobPanel from "@/features/oob/OobPanel";
 import OobDetailPanel from "@/features/oob/OobDetailPanel";
 import LayerToggles from "@/components/LayerToggles";
@@ -35,6 +36,9 @@ export default function Home() {
 
         {/* Logistics overlay — supply KPIs, filters, route table */}
         {activeView === "logistics" && <LogisticsOverlay />}
+
+        {/* Battle detail overlay — battle index, phase timeline, charts */}
+        {activeView === "battles" && <BattleDetailOverlay />}
 
         {/* OOB Panel — collapsed by default on command, expanded on oob */}
         {activeView === "strategic-command" && <OobPanel defaultCollapsed={true} />}

@@ -123,20 +123,13 @@ export default function TimelineScrubber({ embedded = false }: { embedded?: bool
 
   const scaleIdx = timeScales.indexOf(timeScale);
 
-  // When logistics view is active, the standalone (non-embedded) scrubber hides
-  // because LogisticsOverlay renders its own embedded copy
-  if (!embedded && activeView === "logistics") return null;
+  // When logistics or battles view is active, the standalone (non-embedded) scrubber hides
+  // because those views render their own embedded copy
+  if (!embedded && (activeView === "logistics" || activeView === "battles")) return null;
 
   if (embedded) {
     return (
       <div>
-        {zoom >= 6 && (
-          <p className="text-[10px] font-mono text-foreground/40 italic max-w-xs mb-2">
-            {zoom < 10
-              ? "Operational-level data. Some positions interpolated."
-              : "Tactical-level data. Positions and unit details are estimated where primary sources are unavailable."}
-          </p>
-        )}
         <style>{sliderStyle}</style>
         <div
           className="bg-panel/35 backdrop-blur-sm rounded-lg px-4 py-2.5"
@@ -177,14 +170,6 @@ export default function TimelineScrubber({ embedded = false }: { embedded?: bool
         ? "bottom-[10rem] left-4"
         : "bottom-12 left-4"
     }`}>
-      {/* Data disclaimer — sits above the timeline box */}
-      {zoom >= 6 && (
-        <p className="text-[10px] font-mono text-foreground/40 italic max-w-xs mb-2">
-          {zoom < 10
-            ? "Operational-level data. Some positions interpolated."
-            : "Tactical-level data. Positions and unit details are estimated where primary sources are unavailable."}
-        </p>
-      )}
       <style>{sliderStyle}</style>
       <div
         className="bg-panel/35 backdrop-blur-sm rounded-lg px-4 py-2.5"

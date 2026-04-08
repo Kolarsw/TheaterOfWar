@@ -16,6 +16,7 @@ import equipmentDataRaw from "@/data/mock-equipment.json";
 import supplyLinesRaw from "@/data/mock-supply-lines.json";
 import timelineUnitsRaw from "@/data/mock-units-timeline.json";
 import eventsRaw from "@/data/mock-events.json";
+import battlePhasesRaw from "@/data/mock-battle-phases.json";
 
 // ─── Types ───────────────────────────────────────────────────────────
 
@@ -477,4 +478,23 @@ export function getEventGeoJSON(beforeDate?: string): GeoJSON.FeatureCollection 
       };
     }),
   };
+}
+
+// ─── Battle Phase Types & Functions ──────────────────────────────────
+
+export interface BattlePhase {
+  phase_id: string;
+  phase_name: string;
+  timestamp: string;
+  description: string;
+  allied_strength: number;
+  axis_strength: number;
+  allied_casualties_cumulative: number;
+  axis_casualties_cumulative: number;
+}
+
+const allBattlePhases: Record<string, BattlePhase[]> = battlePhasesRaw as Record<string, BattlePhase[]>;
+
+export function getBattlePhases(eventId: string): BattlePhase[] {
+  return allBattlePhases[eventId] || [];
 }

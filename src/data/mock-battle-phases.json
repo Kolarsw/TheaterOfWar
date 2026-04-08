@@ -1,0 +1,138 @@
+{
+  "evt-omaha": [
+    {
+      "phase_id": "omaha-p1",
+      "phase_name": "Naval Bombardment",
+      "timestamp": "1944-06-06T05:50:00Z",
+      "description": "Allied warships open fire on German coastal defenses along Omaha sector.",
+      "allied_strength": 34000,
+      "axis_strength": 7800,
+      "allied_casualties_cumulative": 0,
+      "axis_casualties_cumulative": 0
+    },
+    {
+      "phase_id": "omaha-p2",
+      "phase_name": "First Wave Landing",
+      "timestamp": "1944-06-06T06:30:00Z",
+      "description": "1st and 29th Infantry Divisions hit the beach under devastating fire. Most DD tanks sink in rough seas.",
+      "allied_strength": 34000,
+      "axis_strength": 7800,
+      "allied_casualties_cumulative": 300,
+      "axis_casualties_cumulative": 50
+    },
+    {
+      "phase_id": "omaha-p3",
+      "phase_name": "Pinned on the Beach",
+      "timestamp": "1944-06-06T08:00:00Z",
+      "description": "Troops pinned at the seawall. Officers rally small groups to breach the bluffs through draws.",
+      "allied_strength": 34000,
+      "axis_strength": 7800,
+      "allied_casualties_cumulative": 1000,
+      "axis_casualties_cumulative": 200
+    },
+    {
+      "phase_id": "omaha-p4",
+      "phase_name": "Breaching the Bluffs",
+      "timestamp": "1944-06-06T11:00:00Z",
+      "description": "Small units infiltrate draws and begin flanking German positions on the bluffs. Naval destroyers move close to shore for direct fire support.",
+      "allied_strength": 34000,
+      "axis_strength": 7800,
+      "allied_casualties_cumulative": 1600,
+      "axis_casualties_cumulative": 500
+    },
+    {
+      "phase_id": "omaha-p5",
+      "phase_name": "Beachhead Secured",
+      "timestamp": "1944-06-06T18:00:00Z",
+      "description": "German defensive line broken. Allies hold a shallow beachhead roughly 1.5 miles deep. Reinforcements flowing in.",
+      "allied_strength": 34000,
+      "axis_strength": 7800,
+      "allied_casualties_cumulative": 2400,
+      "axis_casualties_cumulative": 1200
+    }
+  ],
+  "evt-utah": [
+    {
+      "phase_id": "utah-p1",
+      "phase_name": "Airborne Drops",
+      "timestamp": "1944-06-06T01:30:00Z",
+      "description": "82nd and 101st Airborne divisions drop inland to secure causeways and bridges behind Utah Beach.",
+      "allied_strength": 23000,
+      "axis_strength": 5000,
+      "allied_casualties_cumulative": 0,
+      "axis_casualties_cumulative": 0
+    },
+    {
+      "phase_id": "utah-p2",
+      "phase_name": "Beach Landing",
+      "timestamp": "1944-06-06T06:30:00Z",
+      "description": "4th Infantry Division lands 2km south of target due to currents. Lighter defenses than expected.",
+      "allied_strength": 23000,
+      "axis_strength": 5000,
+      "allied_casualties_cumulative": 50,
+      "axis_casualties_cumulative": 100
+    },
+    {
+      "phase_id": "utah-p3",
+      "phase_name": "Linkup with Airborne",
+      "timestamp": "1944-06-06T13:00:00Z",
+      "description": "Beach forces push inland and link up with airborne troops at Ste-Mère-Église.",
+      "allied_strength": 23000,
+      "axis_strength": 5000,
+      "allied_casualties_cumulative": 150,
+      "axis_casualties_cumulative": 400
+    },
+    {
+      "phase_id": "utah-p4",
+      "phase_name": "Beachhead Consolidated",
+      "timestamp": "1944-06-06T18:00:00Z",
+      "description": "Utah beachhead secured with minimal casualties. Deepest penetration of any D-Day beach.",
+      "allied_strength": 23000,
+      "axis_strength": 5000,
+      "allied_casualties_cumulative": 197,
+      "axis_casualties_cumulative": 600
+    }
+  ],
+  "evt-sword": [
+    {
+      "phase_id": "sword-p1",
+      "phase_name": "Beach Assault",
+      "timestamp": "1944-06-06T07:25:00Z",
+      "description": "British 3rd Infantry Division storms Sword Beach with specialized armor support.",
+      "allied_strength": 29000,
+      "axis_strength": 6000,
+      "allied_casualties_cumulative": 100,
+      "axis_casualties_cumulative": 50
+    },
+    {
+      "phase_id": "sword-p2",
+      "phase_name": "Push Toward Caen",
+      "timestamp": "1944-06-06T12:00:00Z",
+      "description": "Lead elements advance toward Caen but encounter stiffening resistance at Périers Ridge.",
+      "allied_strength": 29000,
+      "axis_strength": 6000,
+      "allied_casualties_cumulative": 350,
+      "axis_casualties_cumulative": 200
+    },
+    {
+      "phase_id": "sword-p3",
+      "phase_name": "21st Panzer Counterattack",
+      "timestamp": "1944-06-06T16:00:00Z",
+      "description": "21st Panzer Division launches the only major German armored counterattack of D-Day, driving toward the coast.",
+      "allied_strength": 29000,
+      "axis_strength": 16000,
+      "allied_casualties_cumulative": 550,
+      "axis_casualties_cumulative": 400
+    },
+    {
+      "phase_id": "sword-p4",
+      "phase_name": "Counterattack Repulsed",
+      "timestamp": "1944-06-06T20:00:00Z",
+      "description": "German armor withdraws after encountering 6th Airborne positions and glider reinforcements. Caen remains in German hands.",
+      "allied_strength": 29000,
+      "axis_strength": 16000,
+      "allied_casualties_cumulative": 683,
+      "axis_casualties_cumulative": 500
+    }
+  ]
+}
