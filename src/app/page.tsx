@@ -1,19 +1,31 @@
+"use client";
+
+import { useAppStore } from "@/stores/useAppStore";
+import TopNav from "@/components/TopNav";
 import GlobeMap from "@/features/map/GlobeMap";
+import ViewOverlay from "@/components/ViewOverlay";
+import TimelineScrubber from "@/components/TimelineScrubber";
 
 export default function Home() {
-  return (
-    <main className="relative h-full w-full">
-      <GlobeMap />
+  const mode = useAppStore((s) => s.mode);
 
-      {/* Title overlay */}
-      <div className="absolute top-4 left-4 z-10 pointer-events-none">
-        <h1 className="text-sm font-mono tracking-widest uppercase text-cyan opacity-60">
-          Theater of War
-        </h1>
-        <p className="text-xs font-mono text-foreground/40 mt-1">
-          WWII Logistics &amp; Battle Simulator
-        </p>
+  return (
+    <div
+      className="flex flex-col h-full ring-1 ring-inset"
+      style={{ '--tw-ring-color': mode === 'historical' ? '#00d4ff' : '#ffaa00' } as React.CSSProperties}
+    >
+      <TopNav />
+
+      <div className="relative flex-1 overflow-hidden">
+        {/* Globe — always visible */}
+        <GlobeMap />
+
+        {/* View-specific panels overlaid on the map */}
+        <ViewOverlay />
+
+        {/* Timeline scrubber — always visible */}
+        <TimelineScrubber />
       </div>
-    </main>
+    </div>
   );
 }

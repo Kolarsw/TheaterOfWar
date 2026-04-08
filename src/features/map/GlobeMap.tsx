@@ -18,7 +18,7 @@ export default function GlobeMap() {
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/dark-v11",
-      center: [10, 50], // Europe centered
+      center: [10, 50],
       zoom: 3,
       projection: "globe",
       pitch: 20,
@@ -28,7 +28,6 @@ export default function GlobeMap() {
     map.current.on("style.load", () => {
       if (!map.current) return;
 
-      // Atmosphere and space styling
       map.current.setFog({
         color: "rgb(10, 10, 15)",
         "high-color": "rgb(20, 20, 40)",
@@ -37,12 +36,10 @@ export default function GlobeMap() {
         "star-intensity": 0.4,
       });
 
-      // Boost land/ocean contrast
       map.current.setPaintProperty("land", "background-color", "#2a2a2a");
       map.current.setPaintProperty("water", "fill-color", "rgba(16, 24, 48, 0.75)");
     });
 
-    // Navigation controls (zoom, tilt, rotate)
     map.current.addControl(
       new mapboxgl.NavigationControl({ visualizePitch: true }),
       "top-right"
