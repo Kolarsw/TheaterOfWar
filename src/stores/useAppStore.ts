@@ -25,6 +25,7 @@ interface AppState {
   timeScale: TimeScale;
   warStart: number;
   warEnd: number;
+  selectedUnitId: string | null;
   setActiveView: (view: ViewId) => void;
   setMode: (mode: AppMode) => void;
   setCurrentDate: (date: string) => void;
@@ -34,6 +35,7 @@ interface AppState {
   setPlaybackSpeed: (speed: number) => void;
   setTimeScale: (scale: TimeScale) => void;
   cyclePlaybackSpeed: () => void;
+  setSelectedUnitId: (id: string | null) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -45,6 +47,7 @@ export const useAppStore = create<AppState>((set) => ({
   timeScale: "days",
   warStart: WAR_START,
   warEnd: WAR_END,
+  selectedUnitId: null,
   setActiveView: (view) => set({ activeView: view }),
   setMode: (mode) => set({ mode }),
   setCurrentDate: (date) => set({ currentDate: date }),
@@ -62,4 +65,5 @@ export const useAppStore = create<AppState>((set) => ({
       const idx = speeds.indexOf(state.playbackSpeed);
       return { playbackSpeed: speeds[(idx + 1) % speeds.length] };
     }),
+  setSelectedUnitId: (id) => set({ selectedUnitId: id }),
 }));

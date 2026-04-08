@@ -4,10 +4,12 @@ import { useAppStore } from "@/stores/useAppStore";
 import TopNav from "@/components/TopNav";
 import GlobeMap from "@/features/map/GlobeMap";
 import ViewOverlay from "@/components/ViewOverlay";
+import StrategicCommandOverlay from "@/features/strategic-command/StrategicCommandOverlay";
 import TimelineScrubber from "@/components/TimelineScrubber";
 
 export default function Home() {
   const mode = useAppStore((s) => s.mode);
+  const activeView = useAppStore((s) => s.activeView);
 
   return (
     <div
@@ -22,6 +24,9 @@ export default function Home() {
 
         {/* View-specific panels overlaid on the map */}
         <ViewOverlay />
+
+        {/* Strategic Command overlay — KPIs + unit detail */}
+        {activeView === "strategic-command" && <StrategicCommandOverlay />}
 
         {/* Timeline scrubber — always visible */}
         <TimelineScrubber />
