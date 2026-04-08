@@ -74,10 +74,10 @@ export default function GlobeMap() {
 
       map.current.setFog({
         color: "rgb(10, 10, 15)",
-        "high-color": "rgb(0, 35, 55)",
-        "horizon-blend": 0.35,
+        "high-color": "rgb(0, 60, 95)",
+        "horizon-blend": 0.6,
         "space-color": "rgb(8, 10, 18)",
-        "star-intensity": 0.4,
+        "star-intensity": 0.55,
       });
 
       map.current.setPaintProperty("land", "background-color", "#2a2a2a");
