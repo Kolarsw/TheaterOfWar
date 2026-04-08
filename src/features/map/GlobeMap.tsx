@@ -28,7 +28,7 @@ export default function GlobeMap() {
     map.current.on("style.load", () => {
       if (!map.current) return;
 
-      // Desaturate the base map for that intelligence-tool feel
+      // Atmosphere and space styling
       map.current.setFog({
         color: "rgb(10, 10, 15)",
         "high-color": "rgb(20, 20, 40)",
@@ -36,6 +36,10 @@ export default function GlobeMap() {
         "space-color": "rgb(5, 5, 12)",
         "star-intensity": 0.4,
       });
+
+      // Boost land/ocean contrast
+      map.current.setPaintProperty("land", "background-color", "#2a2a2a");
+      map.current.setPaintProperty("water", "fill-color", "#060610");
     });
 
     // Navigation controls (zoom, tilt, rotate)
