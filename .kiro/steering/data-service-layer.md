@@ -79,3 +79,18 @@ Each function has a `USE_LIVE_DATA` flag (or env var). When false, returns mock 
 - Mapbox doesn't support native line clustering — this needs a custom aggregation approach
 - Options: pre-aggregate in the data service by grouping lines with similar source/target regions, or use Deck.gl's ArcLayer with built-in aggregation
 - Priority: after core views are complete, before Phase 2
+
+
+### Mock Data → Gold Table Mapping
+
+| Mock JSON Files | Gold Table | Notes |
+|---|---|---|
+| `mock-units.json`, `mock-units-axis.json`, `mock-units-hierarchical.json`, `mock-units-axis-hierarchical.json`, `mock-units-timeline.json` | `gold_units` | Single table, all factions/echelons/timestamps as rows |
+| `mock-supply-lines.json` | `gold_supply_lines` | Includes both supply and troop movement arcs |
+| `mock-equipment.json` | `gold_equipment` | Joinable to `gold_units` via `unit_id` |
+
+### Phase 3 Data Service Adjustments
+
+1. **Unit ID consistency:** Mock data uses different `unit_id`s for the same unit at different timestamps (e.g., `us-1id-staging` vs `us-1id`). In the real `gold_units` table, the same `unit_id` will have multiple rows with different `timestamp` values. The `getUnits(beforeDate)` function will need to return the most recent row per `unit_id` before the given date (a `ROW_NUMBER() OVER (PARTITION BY unit_id ORDER BY timestamp DESC)` pattern in SQL).
+
+2. **Equipment table structure:** Mock data stores equipment as a flat JSON object keyed by `unit_id`. In Databricks, `gold_equipment` will be a proper table with `unit_id` as a column, joinable to `gold_units`. The `getEquipment(unitId)` function swap is straightforward — just a `SELECT * FROM gold_equipment WHERE unit_id = ?` query. The hierarchy walk-up logic (checking parent units for equipment data) can either stay client-side or move to a SQL CTE.
