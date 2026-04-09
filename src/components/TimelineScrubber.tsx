@@ -121,6 +121,28 @@ export default function TimelineScrubber({ embedded = false }: { embedded?: bool
     setCurrentDate(new Date(ms).toISOString());
   };
 
+  // Hold-to-repeat for step buttons
+  const holdRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const startHold = (stepFn: () => void) => {
+    stepFn();
+    holdRef.current = setInterval(stepFn, 120);
+  };
+  const stopHold = () => {
+    if (holdRef.current) { clearInterval(holdRef.current); holdRef.current = null; }
+  };
+
+  const stepBack = useCallback(() => {
+    const ms = Math.max(new Date(useAppStore.getState().currentDate).getTime() - msPerTick[useAppStore.getState().timeScale], warStart);
+    setCurrentDate(new Date(ms).toISOString());
+  }, [setCurrentDate, warStart]);
+
+  const stepForward = useCallback(() => {
+    const ms = Math.min(new Date(useAppStore.getState().currentDate).getTime() + msPerTick[useAppStore.getState().timeScale], warEnd);
+    setCurrentDate(new Date(ms).toISOString());
+  }, [setCurrentDate, warEnd]);
+
+  // Spacebar to toggle playback — handled at page level instead
+
   const scaleIdx = timeScales.indexOf(timeScale);
 
   // When logistics or battles view is active, the standalone (non-embedded) scrubber hides
@@ -140,12 +162,12 @@ export default function TimelineScrubber({ embedded = false }: { embedded?: bool
             <span className="text-xs font-mono tracking-wide" style={{ color: accent, opacity: 0.8 }}>{formatDateForScale(currentDate, timeScale)}</span>
           </div>
           <div className="flex items-center gap-2 mb-2">
-            <button onClick={() => { const ms = Math.max(new Date(currentDate).getTime() - msPerTick[timeScale], warStart); setCurrentDate(new Date(ms).toISOString()); }} className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80" style={{ border: `1px solid ${borderColor}` }} aria-label="Step back one unit">−</button>
+            <button onMouseDown={() => startHold(stepBack)} onMouseUp={stopHold} onMouseLeave={stopHold} className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80" style={{ border: `1px solid ${borderColor}` }} aria-label="Step back one unit">−</button>
             <div className="relative flex-1">
               <input type="range" min="0" max="1" step="0.0001" value={progress} onChange={handleSliderChange} className="timeline-slider w-full h-1 appearance-none bg-panel-border rounded-full cursor-pointer" aria-label="Timeline position" />
               <div className="absolute top-1/2 left-0 h-1 rounded-full pointer-events-none -translate-y-1/2" style={{ width: `${progress * 100}%`, backgroundColor: accent, opacity: 0.3 }} />
             </div>
-            <button onClick={() => { const ms = Math.min(new Date(currentDate).getTime() + msPerTick[timeScale], warEnd); setCurrentDate(new Date(ms).toISOString()); }} className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80" style={{ border: `1px solid ${borderColor}` }} aria-label="Step forward one unit">+</button>
+            <button onMouseDown={() => startHold(stepForward)} onMouseUp={stopHold} onMouseLeave={stopHold} className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80" style={{ border: `1px solid ${borderColor}` }} aria-label="Step forward one unit">+</button>
           </div>
           <div className="flex items-center gap-2 mb-2">
             <button onClick={togglePlayback} className="w-7 h-7 rounded flex items-center justify-center transition-colors" style={{ border: `1px solid ${accent}`, color: accent }} aria-label={isPlaying ? "Pause" : "Play"}><span className="text-xs font-mono">{isPlaying ? "⏸" : "▶"}</span></button>
@@ -194,10 +216,9 @@ export default function TimelineScrubber({ embedded = false }: { embedded?: bool
         {/* Slider with step buttons */}
         <div className="flex items-center gap-2 mb-2">
           <button
-            onClick={() => {
-              const ms = Math.max(new Date(currentDate).getTime() - msPerTick[timeScale], warStart);
-              setCurrentDate(new Date(ms).toISOString());
-            }}
+            onMouseDown={() => startHold(stepBack)}
+            onMouseUp={stopHold}
+            onMouseLeave={stopHold}
             className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80"
             style={{ border: `1px solid ${borderColor}` }}
             aria-label="Step back one unit"
@@ -221,10 +242,9 @@ export default function TimelineScrubber({ embedded = false }: { embedded?: bool
             />
           </div>
           <button
-            onClick={() => {
-              const ms = Math.min(new Date(currentDate).getTime() + msPerTick[timeScale], warEnd);
-              setCurrentDate(new Date(ms).toISOString());
-            }}
+            onMouseDown={() => startHold(stepForward)}
+            onMouseUp={stopHold}
+            onMouseLeave={stopHold}
             className="text-xs font-mono px-1.5 py-0.5 rounded transition-colors text-foreground/50 hover:text-foreground/80"
             style={{ border: `1px solid ${borderColor}` }}
             aria-label="Step forward one unit"

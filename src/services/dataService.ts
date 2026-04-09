@@ -57,6 +57,7 @@ const hierarchicalIds = new Set([
   ...axisHierarchicalUnitsRaw.map((u) => u.unit_id),
 ]);
 
+// Build all unit records — hierarchical first, then base, then timeline
 const allUnits: Unit[] = [
   ...hierarchicalUnitsRaw.map((u) => ({ ...u, echelon: u.echelon || "division", faction: u.faction as "allied" | "axis", parent_unit_id: u.parent_unit_id ?? null })),
   ...axisHierarchicalUnitsRaw.map((u) => ({ ...u, echelon: u.echelon || "division", faction: u.faction as "allied" | "axis", parent_unit_id: u.parent_unit_id ?? null })),
@@ -64,6 +65,62 @@ const allUnits: Unit[] = [
   ...axisUnitsRaw.filter((u) => !hierarchicalIds.has(u.unit_id)).map((u) => ({ ...u, echelon: "division", faction: u.faction as "allied" | "axis", parent_unit_id: null })),
   ...timelineUnitsRaw.map((u) => ({ ...u, echelon: "division", faction: u.faction as "allied" | "axis", parent_unit_id: null })),
 ];
+
+// ─── Timeline Index for Interpolation ────────────────────────────────
+// Group timeline snapshots by unit_id, sorted by timestamp
+const timelineIndex = new Map<string, Unit[]>();
+timelineUnitsRaw.forEach((raw) => {
+  const u: Unit = { ...raw, echelon: "division", faction: raw.faction as "allied" | "axis", parent_unit_id: null };
+  if (!timelineIndex.has(u.unit_id)) timelineIndex.set(u.unit_id, []);
+  timelineIndex.get(u.unit_id)!.push(u);
+});
+timelineIndex.forEach((snapshots) => {
+  snapshots.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+});
+
+// IDs that have timeline data — these get interpolated instead of simple filtering
+const timelineUnitIds = new Set(timelineIndex.keys());
+
+function lerp(a: number, b: number, t: number): number {
+  return a + (b - a) * t;
+}
+
+function interpolateUnit(snapshots: Unit[], dateMs: number): Unit | null {
+  if (snapshots.length === 0) return null;
+  const firstMs = new Date(snapshots[0].timestamp).getTime();
+  if (dateMs < firstMs) return null; // unit hasn't appeared yet
+
+  // Find the two surrounding snapshots
+  let before = snapshots[0];
+  let after: Unit | null = null;
+  for (let i = 0; i < snapshots.length; i++) {
+    const ms = new Date(snapshots[i].timestamp).getTime();
+    if (ms <= dateMs) {
+      before = snapshots[i];
+      after = snapshots[i + 1] || null;
+    } else {
+      break;
+    }
+  }
+
+  if (!after) return { ...before }; // past the last snapshot, use latest
+
+  const beforeMs = new Date(before.timestamp).getTime();
+  const afterMs = new Date(after.timestamp).getTime();
+  const t = (dateMs - beforeMs) / (afterMs - beforeMs);
+
+  return {
+    ...before,
+    timestamp: new Date(dateMs).toISOString(),
+    lat: lerp(before.lat, after.lat, t),
+    lng: lerp(before.lng, after.lng, t),
+    troop_count: Math.round(lerp(before.troop_count, after.troop_count, t)),
+    strength_percent: Math.round(lerp(before.strength_percent, after.strength_percent, t)),
+    supply_level: Math.round(lerp(before.supply_level, after.supply_level, t)),
+    combat_effectiveness: Math.round(lerp(before.combat_effectiveness, after.combat_effectiveness, t)),
+    morale: Math.round(lerp(before.morale, after.morale, t)),
+  };
+}
 
 const equipmentData = equipmentDataRaw as Record<string, EquipmentEntry>;
 
@@ -81,7 +138,23 @@ const equipmentUnitIds = new Set(Object.keys(equipmentData));
 export function getUnits(beforeDate?: string): Unit[] {
   if (!beforeDate) return allUnits;
   const ms = new Date(beforeDate).getTime();
-  return allUnits.filter((u) => new Date(u.timestamp).getTime() <= ms);
+
+  // Get non-timeline units that are before the date
+  const staticUnits = allUnits
+    .filter((u) => !timelineUnitIds.has(u.unit_id) && new Date(u.timestamp).getTime() <= ms);
+
+  // Get interpolated timeline units
+  const interpolated: Unit[] = [];
+  timelineIndex.forEach((snapshots) => {
+    const unit = interpolateUnit(snapshots, ms);
+    if (unit) interpolated.push(unit);
+  });
+
+  // Deduplicate: timeline units override static units with the same unit_id
+  const interpolatedIds = new Set(interpolated.map((u) => u.unit_id));
+  const deduped = staticUnits.filter((u) => !interpolatedIds.has(u.unit_id));
+
+  return [...deduped, ...interpolated];
 }
 
 export function getUnitById(unitId: string): Unit | undefined {
@@ -159,6 +232,18 @@ export function getUnitHierarchy(): { allied: UnitNode[]; axis: UnitNode[] } {
 // ─── Map Visualization Functions ─────────────────────────────────────
 
 /**
+ * Simple seeded random number generator for stable point positions.
+ * Same seed always produces the same sequence.
+ */
+function seededRandom(seed: number): () => number {
+  let s = seed;
+  return () => {
+    s = (s * 16807 + 0) % 2147483647;
+    return (s - 1) / 2147483646;
+  };
+}
+
+/**
  * Generate GeoJSON points for map rendering.
  *
  * Phase 1: Client-side synthetic point generation at 1:500 scale.
@@ -173,10 +258,16 @@ export function getTroopPoints(beforeDate?: string): GeoJSON.FeatureCollection {
   filtered.forEach((u) => {
     const pointCount = Math.max(1, Math.round(u.troop_count / 500));
     const spread = Math.min(0.02, 0.002 + (u.troop_count / 500000));
+    // Seed based on unit_id hash for stable positions per unit
+    let hash = 0;
+    for (let c = 0; c < u.unit_id.length; c++) {
+      hash = ((hash << 5) - hash + u.unit_id.charCodeAt(c)) | 0;
+    }
+    const rng = seededRandom(Math.abs(hash) + 1);
 
     for (let i = 0; i < pointCount; i++) {
-      const angle = (i / pointCount) * Math.PI * 2 + (Math.random() * 0.3);
-      const dist = spread * Math.sqrt(Math.random());
+      const angle = (i / pointCount) * Math.PI * 2 + (rng() * 0.3);
+      const dist = spread * Math.sqrt(rng());
       const lng = u.lng + Math.cos(angle) * dist;
       const lat = u.lat + Math.sin(angle) * dist;
 

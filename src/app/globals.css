@@ -75,3 +75,9 @@ body {
 .overflow-y-auto::-webkit-scrollbar {
   display: none;
 }
+
+/* Suppress focus rings on buttons — keyboard nav uses spacebar for playback */
+button:focus, button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}

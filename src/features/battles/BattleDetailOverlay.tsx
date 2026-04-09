@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef } from "react";
 import { useAppStore } from "@/stores/useAppStore";
 import { getEvents, getEventById, getBattlePhases, getUnitById, BattleEvent, BattlePhase } from "@/services/dataService";
 import KpiCard from "@/components/KpiCard";
@@ -40,8 +40,10 @@ export default function BattleDetailOverlay() {
   );
 
   const [activePhaseIdx, setActivePhaseIdx] = useState(0);
+  const manualPhaseSelect = useRef(false);
 
   const selectPhase = (idx: number) => {
+    manualPhaseSelect.current = true;
     setActivePhaseIdx(idx);
     if (phases[idx]) {
       setCurrentDate(phases[idx].timestamp);
@@ -49,38 +51,49 @@ export default function BattleDetailOverlay() {
   };
 
   const selectBattle = (eventId: string) => {
+    manualPhaseSelect.current = true;
     setSelectedEventId(eventId);
     setActivePhaseIdx(0);
     useAppStore.getState().setTimeScale("hours");
     const evt = getEventById(eventId);
     if (evt) {
       flyTo(evt.lng, evt.lat, 12);
-      setCurrentDate(evt.timestamp_start);
+      // Set timeline to 5 minutes before the first phase so we see it happen
+      const battlePhases = getBattlePhases(eventId);
+      const firstPhaseMs = battlePhases.length > 0
+        ? new Date(battlePhases[0].timestamp).getTime() - 10 * 60 * 1000
+        : new Date(evt.timestamp_start).getTime();
+      setCurrentDate(new Date(firstPhaseMs).toISOString());
     }
   };
 
   const chartData = useMemo(() => {
+    const currentMs = new Date(currentDate).getTime();
+
     if (phases.length > 0) {
-      return phases.map((p) => {
-        const time = new Date(p.timestamp);
-        return {
-          name: p.phase_name,
-          time: `${String(time.getHours()).padStart(2, "0")}:${String(time.getMinutes()).padStart(2, "0")}`,
-          "Allied Strength": p.allied_strength - p.allied_casualties_cumulative,
-          "Axis Strength": p.axis_strength - p.axis_casualties_cumulative,
-          "Allied Casualties": p.allied_casualties_cumulative,
-          "Axis Casualties": p.axis_casualties_cumulative,
-        };
-      });
+      // Only show phases up to the current timeline position
+      return phases
+        .filter((p) => new Date(p.timestamp).getTime() <= currentMs)
+        .map((p) => {
+          const time = new Date(p.timestamp);
+          return {
+            name: p.phase_name,
+            time: `${String(time.getHours()).padStart(2, "0")}:${String(time.getMinutes()).padStart(2, "0")}`,
+            "Allied Strength": p.allied_strength - p.allied_casualties_cumulative,
+            "Axis Strength": p.axis_strength - p.axis_casualties_cumulative,
+            "Allied Casualties": p.allied_casualties_cumulative,
+            "Axis Casualties": p.axis_casualties_cumulative,
+          };
+        });
     }
-    // Fallback: show start vs end from summary data
+    // Fallback: show start vs end from summary data (progressive)
     if (!selectedEvent) return [];
-    const startTime = new Date(selectedEvent.timestamp_start);
-    const endTime = new Date(selectedEvent.timestamp_end);
+    const startMs = new Date(selectedEvent.timestamp_start).getTime();
+    const endMs = new Date(selectedEvent.timestamp_end).getTime();
+    if (currentMs < startMs) return [];
     const fmt = (d: Date) => `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
     const alliedCas = selectedEvent.casualties_allied || 0;
     const axisCas = selectedEvent.casualties_axis || 0;
-    // Estimate troop strength from involved units
     const totalAllied = selectedEvent.units_involved.reduce((sum, uid) => {
       const unit = getUnitById(uid);
       return sum + (unit && unit.faction === "allied" ? (unit.troop_count || 0) : 0);
@@ -89,25 +102,77 @@ export default function BattleDetailOverlay() {
       const unit = getUnitById(uid);
       return sum + (unit && unit.faction === "axis" ? (unit.troop_count || 0) : 0);
     }, 0);
-    return [
+    // Progress through the battle (0 to 1)
+    const progress = Math.min(1, (currentMs - startMs) / (endMs - startMs));
+    const points = [
       {
         name: "Start",
-        time: fmt(startTime),
+        time: fmt(new Date(selectedEvent.timestamp_start)),
         "Allied Strength": totalAllied,
         "Axis Strength": totalAxis,
         "Allied Casualties": 0,
         "Axis Casualties": 0,
       },
-      {
-        name: "End",
-        time: fmt(endTime),
-        "Allied Strength": totalAllied - alliedCas,
-        "Axis Strength": totalAxis - axisCas,
-        "Allied Casualties": alliedCas,
-        "Axis Casualties": axisCas,
-      },
     ];
+    if (progress > 0) {
+      points.push({
+        name: progress >= 1 ? "End" : "Current",
+        time: fmt(new Date(currentDate)),
+        "Allied Strength": Math.round(totalAllied - alliedCas * progress),
+        "Axis Strength": Math.round(totalAxis - axisCas * progress),
+        "Allied Casualties": Math.round(alliedCas * progress),
+        "Axis Casualties": Math.round(axisCas * progress),
+      });
+    }
+    return points;
+  }, [phases, selectedEvent, currentDate]);
+
+  // Compute fixed Y-axis domains from ALL phase data (not just visible)
+  const strengthDomain = useMemo(() => {
+    if (phases.length > 0) {
+      const maxVal = Math.max(...phases.map((p) => Math.max(p.allied_strength, p.axis_strength)));
+      return [0, Math.ceil(maxVal / 1000) * 1000];
+    }
+    if (!selectedEvent) return [0, 1000];
+    const totalAllied = selectedEvent.units_involved.reduce((sum, uid) => {
+      const unit = getUnitById(uid);
+      return sum + (unit && unit.faction === "allied" ? (unit.troop_count || 0) : 0);
+    }, 0);
+    const totalAxis = selectedEvent.units_involved.reduce((sum, uid) => {
+      const unit = getUnitById(uid);
+      return sum + (unit && unit.faction === "axis" ? (unit.troop_count || 0) : 0);
+    }, 0);
+    return [0, Math.ceil(Math.max(totalAllied, totalAxis) / 1000) * 1000];
   }, [phases, selectedEvent]);
+
+  const casualtyDomain = useMemo(() => {
+    if (phases.length > 0) {
+      const maxVal = Math.max(...phases.map((p) => Math.max(p.allied_casualties_cumulative, p.axis_casualties_cumulative)));
+      return [0, Math.ceil(Math.max(maxVal, 100) / 100) * 100];
+    }
+    if (!selectedEvent) return [0, 100];
+    const maxCas = Math.max(selectedEvent.casualties_allied || 0, selectedEvent.casualties_axis || 0);
+    return [0, Math.ceil(Math.max(maxCas, 100) / 100) * 100];
+  }, [phases, selectedEvent]);
+
+  // Auto-advance active phase based on current timeline position
+  useMemo(() => {
+    if (phases.length === 0) return;
+    if (manualPhaseSelect.current) {
+      manualPhaseSelect.current = false;
+      return;
+    }
+    const currentMs = new Date(currentDate).getTime();
+    let newIdx = 0;
+    for (let i = 0; i < phases.length; i++) {
+      if (new Date(phases[i].timestamp).getTime() <= currentMs) {
+        newIdx = i;
+      }
+    }
+    if (newIdx !== activePhaseIdx) {
+      setActivePhaseIdx(newIdx);
+    }
+  }, [currentDate, phases]);
 
   return (
     <>
@@ -324,6 +389,7 @@ export default function BattleDetailOverlay() {
                       tickLine={false}
                     />
                     <YAxis
+                      domain={strengthDomain}
                       tick={{ fontSize: 9, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }}
                       axisLine={false}
                       tickLine={false}
@@ -348,6 +414,7 @@ export default function BattleDetailOverlay() {
                       fill={CYAN}
                       fillOpacity={0.15}
                       strokeWidth={2}
+                      isAnimationActive={false}
                     />
                     <Area
                       type="monotone"
@@ -356,6 +423,7 @@ export default function BattleDetailOverlay() {
                       fill={RED}
                       fillOpacity={0.15}
                       strokeWidth={2}
+                      isAnimationActive={false}
                     />
                   </AreaChart>
                 </ResponsiveContainer>
@@ -381,6 +449,7 @@ export default function BattleDetailOverlay() {
                       tickLine={false}
                     />
                     <YAxis
+                      domain={casualtyDomain}
                       tick={{ fontSize: 9, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }}
                       axisLine={false}
                       tickLine={false}
@@ -405,6 +474,7 @@ export default function BattleDetailOverlay() {
                       fill={CYAN}
                       fillOpacity={0.15}
                       strokeWidth={2}
+                      isAnimationActive={false}
                     />
                     <Area
                       type="monotone"
@@ -413,6 +483,7 @@ export default function BattleDetailOverlay() {
                       fill={RED}
                       fillOpacity={0.15}
                       strokeWidth={2}
+                      isAnimationActive={false}
                     />
                   </AreaChart>
                 </ResponsiveContainer>

@@ -91,6 +91,34 @@ Each function has a `USE_LIVE_DATA` flag (or env var). When false, returns mock 
 
 ### Phase 3 Data Service Adjustments
 
-1. **Unit ID consistency:** Mock data uses different `unit_id`s for the same unit at different timestamps (e.g., `us-1id-staging` vs `us-1id`). In the real `gold_units` table, the same `unit_id` will have multiple rows with different `timestamp` values. The `getUnits(beforeDate)` function will need to return the most recent row per `unit_id` before the given date (a `ROW_NUMBER() OVER (PARTITION BY unit_id ORDER BY timestamp DESC)` pattern in SQL).
+1. **Unit ID consistency:** ~~Mock data uses different `unit_id`s for the same unit at different timestamps.~~ **RESOLVED:** Mock timeline data now uses consistent `unit_id`s with multiple timestamped rows per unit, matching the Phase 3 `gold_units` pattern. The `getUnits(beforeDate)` function already deduplicates and returns one interpolated record per unit.
 
 2. **Equipment table structure:** Mock data stores equipment as a flat JSON object keyed by `unit_id`. In Databricks, `gold_equipment` will be a proper table with `unit_id` as a column, joinable to `gold_units`. The `getEquipment(unitId)` function swap is straightforward — just a `SELECT * FROM gold_equipment WHERE unit_id = ?` query. The hierarchy walk-up logic (checking parent units for equipment data) can either stay client-side or move to a SQL CTE.
+
+### Client-Side Interpolation (Phase 1, carries to Phase 3)
+
+The data service includes linear interpolation logic for smooth unit movement between position snapshots. This is critical because historical data has gaps — even well-documented divisions only have daily or weekly position records.
+
+#### How It Works
+- `getUnits(beforeDate)` groups all timeline snapshots by `unit_id`, sorted by timestamp
+- For a given date, it finds the two surrounding snapshots (before and after)
+- Linearly interpolates: `lat`, `lng`, `troop_count`, `strength_percent`, `supply_level`, `combat_effectiveness`, `morale`
+- If the date is before the unit's first snapshot, the unit doesn't appear (hasn't entered the theater yet)
+- If the date is past the last snapshot, the latest known position is used
+
+#### Anchor Snapshots
+To prevent units from interpolating movement before they should (e.g., troops sliding across the Channel before embarkation), add "anchor" snapshots at the departure time with the same coordinates as the staging position. This holds the unit in place until the departure timestamp, then interpolation kicks in for the transit.
+
+**Pattern:** If a unit departs at T, add a snapshot at T with the origin coordinates, and the next snapshot at T+N with the transit/destination coordinates. The unit stays put until T, then moves.
+
+#### Phase 3 Considerations
+- The interpolation logic stays client-side — Databricks provides the anchor points (Gold table rows), the front end fills gaps
+- For units with sparse data (weekly positions), interpolation produces smooth movement on the timeline
+- The `data_confidence` field should be set to `"estimated"` for interpolated positions if surfaced to the user
+- Consider adding a server-side interpolation option via Databricks SQL if client-side performance degrades with thousands of units
+
+#### Seeded Random Point Generation
+`getTroopPoints()` uses a seeded pseudo-random number generator (based on unit ID hash) to scatter synthetic troop points around a unit's center coordinate. This ensures:
+- Points are stable across re-renders (no jitter when timeline scrubs)
+- Same unit always gets the same scatter pattern
+- Points move smoothly with the interpolated center position

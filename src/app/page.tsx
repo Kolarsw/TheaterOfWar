@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useAppStore } from "@/stores/useAppStore";
 import TopNav from "@/components/TopNav";
 import GlobeMap from "@/features/map/GlobeMap";
@@ -16,6 +17,19 @@ import TimelineScrubber from "@/components/TimelineScrubber";
 export default function Home() {
   const mode = useAppStore((s) => s.mode);
   const activeView = useAppStore((s) => s.activeView);
+
+  // Global spacebar to toggle timeline playback
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.code === "Space" && !["INPUT", "TEXTAREA", "SELECT"].includes((e.target as HTMLElement).tagName)) {
+        e.preventDefault();
+        (document.activeElement as HTMLElement)?.blur();
+        useAppStore.getState().togglePlayback();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <div
