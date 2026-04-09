@@ -8,6 +8,7 @@ import ViewOverlay from "@/components/ViewOverlay";
 import StrategicCommandOverlay from "@/features/strategic-command/StrategicCommandOverlay";
 import LogisticsOverlay from "@/features/logistics/LogisticsOverlay";
 import BattleDetailOverlay from "@/features/battles/BattleDetailOverlay";
+import TheaterComparisonOverlay from "@/features/theaters/TheaterComparisonOverlay";
 import OobPanel from "@/features/oob/OobPanel";
 import OobDetailPanel from "@/features/oob/OobDetailPanel";
 import LayerToggles from "@/components/LayerToggles";
@@ -53,6 +54,9 @@ export default function Home() {
 
         {/* Battle detail overlay — battle index, phase timeline, charts */}
         {activeView === "battles" && <BattleDetailOverlay />}
+
+        {/* Theater comparison overlay — charts, KPIs, theater selector */}
+        {activeView === "theaters" && <TheaterComparisonOverlay />}
 
         {/* OOB Panel — collapsed by default on command, expanded on oob */}
         {activeView === "strategic-command" && <OobPanel defaultCollapsed={true} />}

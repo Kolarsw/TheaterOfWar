@@ -17,6 +17,7 @@ import supplyLinesRaw from "@/data/mock-supply-lines.json";
 import timelineUnitsRaw from "@/data/mock-units-timeline.json";
 import eventsRaw from "@/data/mock-events.json";
 import battlePhasesRaw from "@/data/mock-battle-phases.json";
+import theaterSummaryRaw from "@/data/mock-theater-summary.json";
 
 // ─── Types ───────────────────────────────────────────────────────────
 
@@ -588,4 +589,47 @@ const allBattlePhases: Record<string, BattlePhase[]> = battlePhasesRaw as Record
 
 export function getBattlePhases(eventId: string): BattlePhase[] {
   return allBattlePhases[eventId] || [];
+}
+
+// ─── Theater Summary Types & Functions ───────────────────────────────
+
+export type TheaterName = "western_europe" | "eastern_front" | "pacific" | "north_africa" | "atlantic";
+
+export interface TheaterSummary {
+  theater: TheaterName;
+  timestamp: string;
+  allied_strength: number;
+  axis_strength: number;
+  allied_casualties_30d: number;
+  axis_casualties_30d: number;
+  supply_throughput_tons: number;
+  contested_hexes: number;
+  allied_controlled_hexes: number;
+  axis_controlled_hexes: number;
+}
+
+const allTheaterSummary: TheaterSummary[] = theaterSummaryRaw as TheaterSummary[];
+
+export function getTheaterStats(beforeDate?: string): TheaterSummary[] {
+  if (!beforeDate) return allTheaterSummary;
+  const ms = new Date(beforeDate).getTime();
+  return allTheaterSummary.filter((t) => new Date(t.timestamp).getTime() <= ms);
+}
+
+export function getTheaterTimeline(theater: TheaterName): TheaterSummary[] {
+  return allTheaterSummary
+    .filter((t) => t.theater === theater)
+    .sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+}
+
+export function getTheaterLatest(beforeDate?: string): Map<TheaterName, TheaterSummary> {
+  const stats = getTheaterStats(beforeDate);
+  const latest = new Map<TheaterName, TheaterSummary>();
+  stats.forEach((t) => {
+    const existing = latest.get(t.theater);
+    if (!existing || new Date(t.timestamp).getTime() > new Date(existing.timestamp).getTime()) {
+      latest.set(t.theater, t);
+    }
+  });
+  return latest;
 }
