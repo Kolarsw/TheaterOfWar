@@ -52,6 +52,7 @@ These define the JSON structures the front end expects. Phase 1 uses mock data m
 ```json
 {
   "event_id": "string",
+  "parent_event_id": "string | null",
   "event_name": "string",
   "event_type": "battle | bombing | naval_engagement | airborne_operation | siege",
   "timestamp_start": "ISO 8601 datetime",

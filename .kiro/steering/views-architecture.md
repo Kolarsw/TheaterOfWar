@@ -150,6 +150,42 @@ Deep-dive into a specific battle or operation.
 - Links to involved units (click to jump to OOB view)
 - Links to supply routes feeding the battle (click to jump to Logistics view)
 
+### Planned Enhancement: Hierarchical Battle Drill-Down
+
+Add nested battle scopes — Operation → Battle → Phase — so users can view an entire operation at the macro level before drilling into individual engagements.
+
+#### Three Zoom Tiers
+
+**Operation level** (e.g., "Operation Overlord"):
+- Map shows the full operation area (entire Normandy coast)
+- Phase timeline shows macro phases: airborne drops, naval bombardment, beach landings, counterattacks, beachhead consolidation
+- Charts show aggregate force strength and casualties across all child battles combined
+- Battle index lists child battles (Omaha, Utah, Sword, etc.) as clickable drill-down entries
+
+**Battle level** (current implementation):
+- Zoomed to one engagement area
+- Phase timeline shows that battle's phases
+- Charts show that battle's data
+- "← Back to Operation" button returns to the parent operation view
+
+**Phase level** (future, optional):
+- Zoomed into a single phase showing individual unit movements
+- Where H3 hex layer and sub-unit data would add the most value
+
+#### Data Model Changes
+- Add `parent_event_id` field to the Battle/Event Record contract (null for top-level operations, operation's event_id for child battles)
+- Add operation-level phase data (macro phases spanning hours/days instead of minutes/hours)
+- Aggregate strength/casualties computed from child battles' data
+
+#### UI Changes
+- Breadcrumb navigation at top of battle index: `Overlord > Omaha Beach > Pinned on Beach` — click any level to zoom out
+- Battle index becomes hierarchical: operations at top level, expand to see child battles
+- Phase panel, charts, and map zoom all respond to the current scope level
+- Existing interpolation and chart logic carries over unchanged
+
+#### Priority
+After remaining Phase 1 views are complete. Becomes more valuable with multiple operations (Market Garden, Bulge, Barbarossa) where the drill-down hierarchy has real depth.
+
 ---
 
 ## View 7: Simulation Control Panel
