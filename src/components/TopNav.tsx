@@ -25,11 +25,15 @@ export default function TopNav() {
   const { activeView, setActiveView, mode, toggleMode, currentDate } =
     useAppStore();
 
+  const visibleViews = mode === "historical"
+    ? views.filter((v) => v.id !== "simulation")
+    : views;
+
   return (
     <nav className="relative z-20 flex items-center justify-between h-10 px-4 bg-panel/90 backdrop-blur-sm border-b border-panel-border">
       {/* View Switcher */}
       <div className="flex items-center gap-1">
-        {views.map((v) => (
+        {visibleViews.map((v) => (
           <button
             key={v.id}
             onClick={() => setActiveView(v.id)}
@@ -57,7 +61,12 @@ export default function TopNav() {
 
       {/* Right: Mode Toggle */}
       <button
-        onClick={toggleMode}
+        onClick={() => {
+          if (mode === "simulation" && activeView === "simulation") {
+            setActiveView("strategic-command");
+          }
+          toggleMode();
+        }}
         className={`flex items-center gap-2 px-3 py-1 text-xs font-mono tracking-wide rounded border transition-colors ${
           mode === "historical"
             ? "border-cyan/40 text-cyan bg-cyan/10"
