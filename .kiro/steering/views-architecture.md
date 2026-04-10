@@ -152,25 +152,27 @@ Deep-dive into a specific battle or operation.
 
 ### Planned Enhancement: Hierarchical Battle Drill-Down
 
-Add nested battle scopes — Operation → Battle → Phase — so users can view an entire operation at the macro level before drilling into individual engagements.
+Add nested battle scopes — Operation → Phase → Battle — so users can view an entire operation at the macro level before drilling into individual engagements.
 
 #### Three Zoom Tiers
 
 **Operation level** (e.g., "Operation Overlord"):
 - Map shows the full operation area (entire Normandy coast)
-- Phase timeline shows macro phases: airborne drops, naval bombardment, beach landings, counterattacks, beachhead consolidation
-- Charts show aggregate force strength and casualties across all child battles combined
-- Battle index lists child battles (Omaha, Utah, Sword, etc.) as clickable drill-down entries
+- Phase timeline shows macro phases: airborne insertion, naval bombardment, beach landings, counterattacks, breakout
+- Charts show aggregate force strength and casualties across the entire operation
+- Phase list in the right panel shows the operation's macro phases as clickable entries
+
+**Phase level** (e.g., "Beach Landings"):
+- Map zooms to the area relevant to that phase
+- Battle index lists the individual engagements within this phase (Omaha, Utah, Sword, Gold, Juno)
+- Charts show phase-level aggregate data
+- Click a battle to drill down further
 
 **Battle level** (current implementation):
 - Zoomed to one engagement area
-- Phase timeline shows that battle's phases
+- Phase timeline shows that battle's tactical phases
 - Charts show that battle's data
-- "← Back to Operation" button returns to the parent operation view
-
-**Phase level** (future, optional):
-- Zoomed into a single phase showing individual unit movements
-- Where territory control layer and sub-unit data would add the most value
+- "← Back to Phase" or "← Back to Operation" breadcrumb navigation
 
 #### Data Model Changes
 - Add `parent_event_id` field to the Battle/Event Record contract (null for top-level operations, operation's event_id for child battles)
