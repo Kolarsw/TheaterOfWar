@@ -59,12 +59,15 @@ const hierarchicalIds = new Set([
   ...axisHierarchicalUnitsRaw.map((u) => u.unit_id),
 ]);
 
-// Build all unit records — hierarchical first, then base, then timeline
+// IDs that have timeline data — these are handled by interpolation, not static records
+const timelineIds = new Set(timelineUnitsRaw.map((u) => u.unit_id));
+
+// Build all unit records — hierarchical first, then base (excluding timeline units), then timeline
 const allUnits: Unit[] = [
   ...hierarchicalUnitsRaw.map((u) => ({ ...u, echelon: u.echelon || "division", faction: u.faction as "allied" | "axis", parent_unit_id: u.parent_unit_id ?? null })),
   ...axisHierarchicalUnitsRaw.map((u) => ({ ...u, echelon: u.echelon || "division", faction: u.faction as "allied" | "axis", parent_unit_id: u.parent_unit_id ?? null })),
-  ...alliedUnitsRaw.filter((u) => !hierarchicalIds.has(u.unit_id)).map((u) => ({ ...u, echelon: "division", faction: u.faction as "allied" | "axis", parent_unit_id: null })),
-  ...axisUnitsRaw.filter((u) => !hierarchicalIds.has(u.unit_id)).map((u) => ({ ...u, echelon: "division", faction: u.faction as "allied" | "axis", parent_unit_id: null })),
+  ...alliedUnitsRaw.filter((u) => !hierarchicalIds.has(u.unit_id) && !timelineIds.has(u.unit_id)).map((u) => ({ ...u, echelon: "division", faction: u.faction as "allied" | "axis", parent_unit_id: null })),
+  ...axisUnitsRaw.filter((u) => !hierarchicalIds.has(u.unit_id) && !timelineIds.has(u.unit_id)).map((u) => ({ ...u, echelon: "division", faction: u.faction as "allied" | "axis", parent_unit_id: null })),
   ...timelineUnitsRaw.map((u) => ({ ...u, echelon: "division", faction: u.faction as "allied" | "axis", parent_unit_id: null })),
 ];
 
