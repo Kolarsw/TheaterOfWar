@@ -39,4 +39,19 @@ Replace mock data with live Databricks queries.
 - H3 hex-based troop distribution replaces client-side point generation
 - Zustand-based async state management for smooth timeline scrubbing
 
+#### ⚠️ REQUIRED: GADM Tileset Upload (do this BEFORE wiring territory control to live data)
+The territory control layer currently uses a bundled France GeoJSON (~362KB) as a proof of concept. Before connecting to Databricks for live territory data, you MUST:
+1. Download the full GADM world dataset from https://gadm.org/download_world.html (~200MB zip, admin level 2)
+2. Run a simplification script (like `scripts/simplify-gadm.js`) to merge all countries into one GeoJSON and reduce geometry complexity
+3. Upload the result to Mapbox Studio as a custom vector tileset (drag-and-drop or `mapbox upload` CLI)
+4. In GlobeMap.tsx, swap the territory source from `type: "geojson"` to `type: "vector"` with the new tileset URL
+5. Delete the bundled `gadm-france-departments.json` — geometry now lives on Mapbox's tile servers
+6. The control data (`region_id` + `timestamp` + `faction`) comes from Databricks Gold table `gold_territory_control` — the join logic in `getTerritoryGeoJSON` stays the same
+7. Consider using Mapbox `feature-state` for dynamic coloring instead of rebuilding GeoJSON on every timeline tick (better performance at scale)
+
 ## Current Phase: Phase 1
+
+## TODO: Developer Setup
+- Create a `.env.example` with `NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token_here` so collaborators know what's needed
+- Consider adding URL domain restrictions on the Mapbox token via the Mapbox dashboard for production
+- Optionally document the setup steps in README.md

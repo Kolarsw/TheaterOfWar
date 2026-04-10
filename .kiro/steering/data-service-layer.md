@@ -42,6 +42,12 @@ Data Service (src/services/dataService.ts)
 ### Theater Data (Gold table: `theater_summary`)
 - `getTheaterStats(beforeDate?)` — Per-theater aggregated stats
 
+### Territory Control Data (Gold table: `territory_control`)
+- `getTerritoryControl(beforeDate?)` — Latest faction assignment per region
+- `getTerritoryGeoJSON(beforeDate?)` — GeoJSON FeatureCollection with region polygons colored by faction
+- Phase 1: GADM GeoJSON bundled per country, control data from mock JSON
+- Phase 3: GADM vector tileset on Mapbox, control data from Databricks SQL API
+
 ## Phase 3 Swap Pattern
 Each function has a `USE_LIVE_DATA` flag (or env var). When false, returns mock data. When true, calls the Databricks SQL Statement Execution API. The response shape is identical either way — components don't know or care where the data came from.
 
@@ -88,6 +94,7 @@ Each function has a `USE_LIVE_DATA` flag (or env var). When false, returns mock 
 | `mock-units.json`, `mock-units-axis.json`, `mock-units-hierarchical.json`, `mock-units-axis-hierarchical.json`, `mock-units-timeline.json` | `gold_units` | Single table, all factions/echelons/timestamps as rows |
 | `mock-supply-lines.json` | `gold_supply_lines` | Includes both supply and troop movement arcs |
 | `mock-equipment.json` | `gold_equipment` | Joinable to `gold_units` via `unit_id` |
+| `mock-territory-control.json` | `gold_territory_control` | `region_id` (GADM GID) + `timestamp` + `controlling_faction`. Geometry comes from GADM tileset, not the data table |
 
 ### Phase 3 Data Service Adjustments
 

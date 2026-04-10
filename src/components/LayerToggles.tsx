@@ -57,7 +57,7 @@ export default function LayerToggles() {
         </span>
         <LayerToggle label="Units" enabled={layers.units} onToggle={() => toggleLayer("units")} />
         <LayerToggle label="Supply Arcs" enabled={layers.supplyArcs} onToggle={() => toggleLayer("supplyArcs")} />
-        <LayerToggle label="Hex Control" enabled={layers.hexControl} onToggle={() => toggleLayer("hexControl")} />
+        <LayerToggle label="Territory" enabled={layers.hexControl} onToggle={() => toggleLayer("hexControl")} />
         <LayerToggle label="Events" enabled={layers.events} onToggle={() => toggleLayer("events")} />
       </div>
     </div>

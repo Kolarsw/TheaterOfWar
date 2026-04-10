@@ -18,6 +18,7 @@ import timelineUnitsRaw from "@/data/mock-units-timeline.json";
 import eventsRaw from "@/data/mock-events.json";
 import battlePhasesRaw from "@/data/mock-battle-phases.json";
 import theaterSummaryRaw from "@/data/mock-theater-summary.json";
+import territoryControlRaw from "@/data/mock-territory-control.json";
 
 // ─── Types ───────────────────────────────────────────────────────────
 
@@ -632,4 +633,44 @@ export function getTheaterLatest(beforeDate?: string): Map<TheaterName, TheaterS
     }
   });
   return latest;
+}
+
+// ─── Territory Control Types & Functions ─────────────────────────────
+
+export interface TerritoryControl {
+  region_id: string;
+  region_name: string;
+  country_code: string;
+  admin_level: number;
+  timestamp: string;
+  controlling_faction: "allied" | "axis" | "contested" | "neutral";
+  supply_density: number;
+  terrain_type: "urban" | "forest" | "plains" | "mountain" | "coastal" | "river_crossing";
+}
+
+const allTerritoryControl: TerritoryControl[] = territoryControlRaw as TerritoryControl[];
+
+// Group by region_id for latest-snapshot lookup
+const territoryTimeline = new Map<string, TerritoryControl[]>();
+allTerritoryControl.forEach((t) => {
+  if (!territoryTimeline.has(t.region_id)) territoryTimeline.set(t.region_id, []);
+  territoryTimeline.get(t.region_id)!.push(t);
+});
+territoryTimeline.forEach((snapshots) => {
+  snapshots.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+});
+
+export function getTerritoryControl(beforeDate?: string): TerritoryControl[] {
+  if (!beforeDate) return allTerritoryControl;
+  const ms = new Date(beforeDate).getTime();
+  const result: TerritoryControl[] = [];
+  territoryTimeline.forEach((snapshots) => {
+    let latest: TerritoryControl | null = null;
+    for (const s of snapshots) {
+      if (new Date(s.timestamp).getTime() <= ms) latest = s;
+      else break;
+    }
+    if (latest) result.push(latest);
+  });
+  return result;
 }

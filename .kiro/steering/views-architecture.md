@@ -20,12 +20,12 @@ Horizontal row of stat cards that update as the timeline scrubs:
 - Total Allied Forces (personnel count)
 - Total Axis Forces (personnel count)
 - Active Supply Lines (count + total tonnage)
-- Contested Territories (H3 hex count)
+- Contested Territories (region count)
 - Days Since [Key Event] (contextual — e.g., "Days Since D-Day")
 - Allied vs Axis Casualty Rate (rolling 30-day)
 
 ### Map Layers (togglable)
-- Hex Layer: territorial control + supply density
+- Territory Layer: faction control by administrative region (GADM boundaries)
 - Icon Layer: unit positions (NATO symbology)
 - Arc Layer: supply routes (animated flow)
 - Scatterplot Layer: battles/events
@@ -170,7 +170,7 @@ Add nested battle scopes — Operation → Battle → Phase — so users can vie
 
 **Phase level** (future, optional):
 - Zoomed into a single phase showing individual unit movements
-- Where H3 hex layer and sub-unit data would add the most value
+- Where territory control layer and sub-unit data would add the most value
 
 #### Data Model Changes
 - Add `parent_event_id` field to the Battle/Event Record contract (null for top-level operations, operation's event_id for child battles)

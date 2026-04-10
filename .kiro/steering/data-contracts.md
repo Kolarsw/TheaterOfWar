@@ -69,16 +69,34 @@ These define the JSON structures the front end expects. Phase 1 uses mock data m
 }
 ```
 
-## Terrain/Control Record
+## Territory Control Record
 ```json
 {
-  "h3_index": "string",
+  "region_id": "string (GADM GID_2 code, e.g. 'FRA.4.1_1' for Calvados)",
+  "region_name": "string",
+  "country_code": "string (ISO 3166-1 alpha-3, e.g. 'FRA')",
+  "admin_level": "number (0=country, 1=state/region, 2=department/county)",
   "timestamp": "ISO 8601 datetime",
   "controlling_faction": "allied | axis | contested | neutral",
   "supply_density": "number",
   "terrain_type": "urban | forest | plains | mountain | coastal | river_crossing"
 }
 ```
+
+### Territory Control — Geometry Strategy
+
+**Phase 1 (Current):** Bundle simplified GADM GeoJSON per country at admin level 2 (department/county). Start with France for Normandy. Geometry files are static assets loaded as GeoJSON sources in Mapbox. ~2MB per country simplified.
+
+**Phase 3 (Target):** Upload full GADM dataset to Mapbox as a custom vector tileset. Swap the GeoJSON source to a vector tile source — one-line change from `type: "geojson"` to `type: "vector"` with a tileset URL. Only visible tiles load at the current zoom/viewport. Zero bundle size, scales to the whole world.
+
+**Zoom-based rendering:**
+- Zoom < 5: Country-level fills (admin level 0) — entire countries colored by controlling faction
+- Zoom 5-9: Department-level fills (admin level 2) — sub-national regions colored by faction, front line implied by color boundaries
+- Zoom 9+: Department fills + front line polyline — derived from edges where allied and axis regions meet
+
+**Data model:** The control data (`region_id` + `timestamp` + `faction`) stays the same regardless of geometry source. Components call `getTerritoryControl(beforeDate)`, which returns the latest faction assignment per region. The geometry is joined client-side.
+
+**GADM data source:** https://gadm.org — free, global coverage, stable region IDs, multiple admin levels. GID codes are hierarchical (e.g., `FRA.4_1` = Calvados, France).
 
 ## Supply Dependency Node
 ```json

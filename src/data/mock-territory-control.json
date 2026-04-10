@@ -1,0 +1,6722 @@
+[
+  {
+    "region_id": "FRA.1.1_1",
+    "region_name": "Ain",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.2_1",
+    "region_name": "Allier",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.3_1",
+    "region_name": "Ardèche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.4_1",
+    "region_name": "Cantal",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.5_1",
+    "region_name": "Drôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.6_1",
+    "region_name": "Haute-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.7_1",
+    "region_name": "Haute-Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.8_1",
+    "region_name": "Isère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.9_1",
+    "region_name": "Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.10_1",
+    "region_name": "Puy-de-Dôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.11_1",
+    "region_name": "Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.12_1",
+    "region_name": "Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.1_1",
+    "region_name": "Côte-d'Or",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.2_1",
+    "region_name": "Doubs",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.3_1",
+    "region_name": "Haute-Saône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.4_1",
+    "region_name": "Jura",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.5_1",
+    "region_name": "Nièvre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.6_1",
+    "region_name": "Saône-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.7_1",
+    "region_name": "TerritoiredeBelfort",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.8_1",
+    "region_name": "Yonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.1_1",
+    "region_name": "Côtes-d'Armor",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.2_1",
+    "region_name": "Finistère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.3_1",
+    "region_name": "Ille-et-Vilaine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.4_1",
+    "region_name": "Morbihan",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.1_1",
+    "region_name": "Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.2_1",
+    "region_name": "Eure-et-Loir",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.4_1",
+    "region_name": "Indre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.3_1",
+    "region_name": "Indre-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.5_1",
+    "region_name": "Loir-et-Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.6_1",
+    "region_name": "Loiret",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.1_1",
+    "region_name": "Corse-du-Sud",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.2_1",
+    "region_name": "Haute-Corse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.1_1",
+    "region_name": "Ardennes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.2_1",
+    "region_name": "Aube",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.3_1",
+    "region_name": "Bas-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.4_1",
+    "region_name": "Haut-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.5_1",
+    "region_name": "Haute-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.6_1",
+    "region_name": "Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.7_1",
+    "region_name": "Meurthe-et-Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.8_1",
+    "region_name": "Meuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.9_1",
+    "region_name": "Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.10_1",
+    "region_name": "Vosges",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.1_1",
+    "region_name": "Aisne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.2_1",
+    "region_name": "Nord",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.3_1",
+    "region_name": "Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.4_1",
+    "region_name": "Pas-de-Calais",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.5_1",
+    "region_name": "Somme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.1_1",
+    "region_name": "Essonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.2_1",
+    "region_name": "Hauts-de-Seine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.3_1",
+    "region_name": "Paris",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.4_1",
+    "region_name": "Seine-et-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.5_1",
+    "region_name": "Seine-Saint-Denis",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.6_1",
+    "region_name": "Val-d'Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.7_1",
+    "region_name": "Val-de-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.8_1",
+    "region_name": "Yvelines",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.1_1",
+    "region_name": "Calvados",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.2_1",
+    "region_name": "Eure",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.3_1",
+    "region_name": "Manche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.4_1",
+    "region_name": "Orne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.5_1",
+    "region_name": "Seine-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.2_1",
+    "region_name": "Charente",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.1_1",
+    "region_name": "Charente-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.3_1",
+    "region_name": "Corrèze",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.4_1",
+    "region_name": "Creuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.5_1",
+    "region_name": "Deux-Sèvres",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.6_1",
+    "region_name": "Dordogne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.7_1",
+    "region_name": "Gironde",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.8_1",
+    "region_name": "Haute-Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.9_1",
+    "region_name": "Landes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.10_1",
+    "region_name": "Lot-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.11_1",
+    "region_name": "Pyrénées-Atlantiques",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.12_1",
+    "region_name": "Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.1_1",
+    "region_name": "Ariège",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.2_1",
+    "region_name": "Aude",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.3_1",
+    "region_name": "Aveyron",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.4_1",
+    "region_name": "Gard",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.5_1",
+    "region_name": "Gers",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.6_1",
+    "region_name": "Haute-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.7_1",
+    "region_name": "Hautes-Pyrénées",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.8_1",
+    "region_name": "Hérault",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.9_1",
+    "region_name": "Lot",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.10_1",
+    "region_name": "Lozère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.11_1",
+    "region_name": "Pyrénées-Orientales",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.13_1",
+    "region_name": "Tarn",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.12_1",
+    "region_name": "Tarn-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.1_1",
+    "region_name": "Loire-Atlantique",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.2_1",
+    "region_name": "Maine-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.3_1",
+    "region_name": "Mayenne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.4_1",
+    "region_name": "Sarthe",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.5_1",
+    "region_name": "Vendée",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.1_1",
+    "region_name": "Alpes-de-Haute-Provence",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.2_1",
+    "region_name": "Alpes-Maritimes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.3_1",
+    "region_name": "Bouches-du-Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.4_1",
+    "region_name": "Hautes-Alpes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.5_1",
+    "region_name": "Var",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.6_1",
+    "region_name": "Vaucluse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-05T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.1_1",
+    "region_name": "Ain",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.2_1",
+    "region_name": "Allier",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.3_1",
+    "region_name": "Ardèche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.4_1",
+    "region_name": "Cantal",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.5_1",
+    "region_name": "Drôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.6_1",
+    "region_name": "Haute-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.7_1",
+    "region_name": "Haute-Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.8_1",
+    "region_name": "Isère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.9_1",
+    "region_name": "Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.10_1",
+    "region_name": "Puy-de-Dôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.11_1",
+    "region_name": "Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.12_1",
+    "region_name": "Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.1_1",
+    "region_name": "Côte-d'Or",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.2_1",
+    "region_name": "Doubs",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.3_1",
+    "region_name": "Haute-Saône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.4_1",
+    "region_name": "Jura",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.5_1",
+    "region_name": "Nièvre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.6_1",
+    "region_name": "Saône-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.7_1",
+    "region_name": "TerritoiredeBelfort",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.8_1",
+    "region_name": "Yonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.1_1",
+    "region_name": "Côtes-d'Armor",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.2_1",
+    "region_name": "Finistère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.3_1",
+    "region_name": "Ille-et-Vilaine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.4_1",
+    "region_name": "Morbihan",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.1_1",
+    "region_name": "Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.2_1",
+    "region_name": "Eure-et-Loir",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.4_1",
+    "region_name": "Indre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.3_1",
+    "region_name": "Indre-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.5_1",
+    "region_name": "Loir-et-Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.6_1",
+    "region_name": "Loiret",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.1_1",
+    "region_name": "Corse-du-Sud",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.2_1",
+    "region_name": "Haute-Corse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.1_1",
+    "region_name": "Ardennes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.2_1",
+    "region_name": "Aube",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.3_1",
+    "region_name": "Bas-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.4_1",
+    "region_name": "Haut-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.5_1",
+    "region_name": "Haute-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.6_1",
+    "region_name": "Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.7_1",
+    "region_name": "Meurthe-et-Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.8_1",
+    "region_name": "Meuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.9_1",
+    "region_name": "Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.10_1",
+    "region_name": "Vosges",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.1_1",
+    "region_name": "Aisne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.2_1",
+    "region_name": "Nord",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.3_1",
+    "region_name": "Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.4_1",
+    "region_name": "Pas-de-Calais",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.5_1",
+    "region_name": "Somme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.1_1",
+    "region_name": "Essonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.2_1",
+    "region_name": "Hauts-de-Seine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.3_1",
+    "region_name": "Paris",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.4_1",
+    "region_name": "Seine-et-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.5_1",
+    "region_name": "Seine-Saint-Denis",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.6_1",
+    "region_name": "Val-d'Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.7_1",
+    "region_name": "Val-de-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.8_1",
+    "region_name": "Yvelines",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.1_1",
+    "region_name": "Calvados",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 20,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.2_1",
+    "region_name": "Eure",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.3_1",
+    "region_name": "Manche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 20,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.4_1",
+    "region_name": "Orne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.5_1",
+    "region_name": "Seine-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.2_1",
+    "region_name": "Charente",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.1_1",
+    "region_name": "Charente-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.3_1",
+    "region_name": "Corrèze",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.4_1",
+    "region_name": "Creuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.5_1",
+    "region_name": "Deux-Sèvres",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.6_1",
+    "region_name": "Dordogne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.7_1",
+    "region_name": "Gironde",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.8_1",
+    "region_name": "Haute-Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.9_1",
+    "region_name": "Landes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.10_1",
+    "region_name": "Lot-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.11_1",
+    "region_name": "Pyrénées-Atlantiques",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.12_1",
+    "region_name": "Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.1_1",
+    "region_name": "Ariège",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.2_1",
+    "region_name": "Aude",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.3_1",
+    "region_name": "Aveyron",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.4_1",
+    "region_name": "Gard",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.5_1",
+    "region_name": "Gers",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.6_1",
+    "region_name": "Haute-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.7_1",
+    "region_name": "Hautes-Pyrénées",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.8_1",
+    "region_name": "Hérault",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.9_1",
+    "region_name": "Lot",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.10_1",
+    "region_name": "Lozère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.11_1",
+    "region_name": "Pyrénées-Orientales",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.13_1",
+    "region_name": "Tarn",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.12_1",
+    "region_name": "Tarn-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.1_1",
+    "region_name": "Loire-Atlantique",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.2_1",
+    "region_name": "Maine-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.3_1",
+    "region_name": "Mayenne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.4_1",
+    "region_name": "Sarthe",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.5_1",
+    "region_name": "Vendée",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.1_1",
+    "region_name": "Alpes-de-Haute-Provence",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.2_1",
+    "region_name": "Alpes-Maritimes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.3_1",
+    "region_name": "Bouches-du-Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.4_1",
+    "region_name": "Hautes-Alpes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.5_1",
+    "region_name": "Var",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.6_1",
+    "region_name": "Vaucluse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-06T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 50,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.1_1",
+    "region_name": "Ain",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.2_1",
+    "region_name": "Allier",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.3_1",
+    "region_name": "Ardèche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.4_1",
+    "region_name": "Cantal",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.5_1",
+    "region_name": "Drôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.6_1",
+    "region_name": "Haute-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.7_1",
+    "region_name": "Haute-Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.8_1",
+    "region_name": "Isère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.9_1",
+    "region_name": "Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.10_1",
+    "region_name": "Puy-de-Dôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.11_1",
+    "region_name": "Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.12_1",
+    "region_name": "Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.1_1",
+    "region_name": "Côte-d'Or",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.2_1",
+    "region_name": "Doubs",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.3_1",
+    "region_name": "Haute-Saône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.4_1",
+    "region_name": "Jura",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.5_1",
+    "region_name": "Nièvre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.6_1",
+    "region_name": "Saône-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.7_1",
+    "region_name": "TerritoiredeBelfort",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.8_1",
+    "region_name": "Yonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.1_1",
+    "region_name": "Côtes-d'Armor",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.2_1",
+    "region_name": "Finistère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.3_1",
+    "region_name": "Ille-et-Vilaine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.4_1",
+    "region_name": "Morbihan",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.1_1",
+    "region_name": "Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.2_1",
+    "region_name": "Eure-et-Loir",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.4_1",
+    "region_name": "Indre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.3_1",
+    "region_name": "Indre-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.5_1",
+    "region_name": "Loir-et-Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.6_1",
+    "region_name": "Loiret",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.1_1",
+    "region_name": "Corse-du-Sud",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.2_1",
+    "region_name": "Haute-Corse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.1_1",
+    "region_name": "Ardennes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.2_1",
+    "region_name": "Aube",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.3_1",
+    "region_name": "Bas-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.4_1",
+    "region_name": "Haut-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.5_1",
+    "region_name": "Haute-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.6_1",
+    "region_name": "Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.7_1",
+    "region_name": "Meurthe-et-Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.8_1",
+    "region_name": "Meuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.9_1",
+    "region_name": "Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.10_1",
+    "region_name": "Vosges",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.1_1",
+    "region_name": "Aisne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.2_1",
+    "region_name": "Nord",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.3_1",
+    "region_name": "Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.4_1",
+    "region_name": "Pas-de-Calais",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.5_1",
+    "region_name": "Somme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.1_1",
+    "region_name": "Essonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.2_1",
+    "region_name": "Hauts-de-Seine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.3_1",
+    "region_name": "Paris",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.4_1",
+    "region_name": "Seine-et-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.5_1",
+    "region_name": "Seine-Saint-Denis",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.6_1",
+    "region_name": "Val-d'Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.7_1",
+    "region_name": "Val-de-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.8_1",
+    "region_name": "Yvelines",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.1_1",
+    "region_name": "Calvados",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 60,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.2_1",
+    "region_name": "Eure",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 30,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.3_1",
+    "region_name": "Manche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 60,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.4_1",
+    "region_name": "Orne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 30,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.5_1",
+    "region_name": "Seine-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 30,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.2_1",
+    "region_name": "Charente",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.1_1",
+    "region_name": "Charente-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.3_1",
+    "region_name": "Corrèze",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.4_1",
+    "region_name": "Creuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.5_1",
+    "region_name": "Deux-Sèvres",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.6_1",
+    "region_name": "Dordogne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.7_1",
+    "region_name": "Gironde",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.8_1",
+    "region_name": "Haute-Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.9_1",
+    "region_name": "Landes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.10_1",
+    "region_name": "Lot-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.11_1",
+    "region_name": "Pyrénées-Atlantiques",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.12_1",
+    "region_name": "Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.1_1",
+    "region_name": "Ariège",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.2_1",
+    "region_name": "Aude",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.3_1",
+    "region_name": "Aveyron",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.4_1",
+    "region_name": "Gard",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.5_1",
+    "region_name": "Gers",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.6_1",
+    "region_name": "Haute-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.7_1",
+    "region_name": "Hautes-Pyrénées",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.8_1",
+    "region_name": "Hérault",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.9_1",
+    "region_name": "Lot",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.10_1",
+    "region_name": "Lozère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.11_1",
+    "region_name": "Pyrénées-Orientales",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.13_1",
+    "region_name": "Tarn",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.12_1",
+    "region_name": "Tarn-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.1_1",
+    "region_name": "Loire-Atlantique",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.2_1",
+    "region_name": "Maine-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.3_1",
+    "region_name": "Mayenne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.4_1",
+    "region_name": "Sarthe",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.5_1",
+    "region_name": "Vendée",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.1_1",
+    "region_name": "Alpes-de-Haute-Provence",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.2_1",
+    "region_name": "Alpes-Maritimes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.3_1",
+    "region_name": "Bouches-du-Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.4_1",
+    "region_name": "Hautes-Alpes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.5_1",
+    "region_name": "Var",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.6_1",
+    "region_name": "Vaucluse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-06-07T12:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.1_1",
+    "region_name": "Ain",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.2_1",
+    "region_name": "Allier",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.3_1",
+    "region_name": "Ardèche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.4_1",
+    "region_name": "Cantal",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.5_1",
+    "region_name": "Drôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.6_1",
+    "region_name": "Haute-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.7_1",
+    "region_name": "Haute-Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.8_1",
+    "region_name": "Isère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.9_1",
+    "region_name": "Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.10_1",
+    "region_name": "Puy-de-Dôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.11_1",
+    "region_name": "Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.12_1",
+    "region_name": "Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.1_1",
+    "region_name": "Côte-d'Or",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.2_1",
+    "region_name": "Doubs",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.3_1",
+    "region_name": "Haute-Saône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.4_1",
+    "region_name": "Jura",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.5_1",
+    "region_name": "Nièvre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.6_1",
+    "region_name": "Saône-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.7_1",
+    "region_name": "TerritoiredeBelfort",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.8_1",
+    "region_name": "Yonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.1_1",
+    "region_name": "Côtes-d'Armor",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.2_1",
+    "region_name": "Finistère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.3_1",
+    "region_name": "Ille-et-Vilaine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.4_1",
+    "region_name": "Morbihan",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.1_1",
+    "region_name": "Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.2_1",
+    "region_name": "Eure-et-Loir",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.4_1",
+    "region_name": "Indre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.3_1",
+    "region_name": "Indre-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.5_1",
+    "region_name": "Loir-et-Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.6_1",
+    "region_name": "Loiret",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.1_1",
+    "region_name": "Corse-du-Sud",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.2_1",
+    "region_name": "Haute-Corse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.1_1",
+    "region_name": "Ardennes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.2_1",
+    "region_name": "Aube",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.3_1",
+    "region_name": "Bas-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.4_1",
+    "region_name": "Haut-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.5_1",
+    "region_name": "Haute-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.6_1",
+    "region_name": "Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.7_1",
+    "region_name": "Meurthe-et-Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.8_1",
+    "region_name": "Meuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.9_1",
+    "region_name": "Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.10_1",
+    "region_name": "Vosges",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.1_1",
+    "region_name": "Aisne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.2_1",
+    "region_name": "Nord",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.3_1",
+    "region_name": "Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.4_1",
+    "region_name": "Pas-de-Calais",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.5_1",
+    "region_name": "Somme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.1_1",
+    "region_name": "Essonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.2_1",
+    "region_name": "Hauts-de-Seine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.3_1",
+    "region_name": "Paris",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.4_1",
+    "region_name": "Seine-et-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.5_1",
+    "region_name": "Seine-Saint-Denis",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.6_1",
+    "region_name": "Val-d'Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.7_1",
+    "region_name": "Val-de-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.8_1",
+    "region_name": "Yvelines",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.1_1",
+    "region_name": "Calvados",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 70,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.2_1",
+    "region_name": "Eure",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 70,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.3_1",
+    "region_name": "Manche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 70,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.4_1",
+    "region_name": "Orne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 70,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.5_1",
+    "region_name": "Seine-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 70,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.2_1",
+    "region_name": "Charente",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.1_1",
+    "region_name": "Charente-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.3_1",
+    "region_name": "Corrèze",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.4_1",
+    "region_name": "Creuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.5_1",
+    "region_name": "Deux-Sèvres",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.6_1",
+    "region_name": "Dordogne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.7_1",
+    "region_name": "Gironde",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.8_1",
+    "region_name": "Haute-Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.9_1",
+    "region_name": "Landes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.10_1",
+    "region_name": "Lot-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.11_1",
+    "region_name": "Pyrénées-Atlantiques",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.12_1",
+    "region_name": "Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.1_1",
+    "region_name": "Ariège",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.2_1",
+    "region_name": "Aude",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.3_1",
+    "region_name": "Aveyron",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.4_1",
+    "region_name": "Gard",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.5_1",
+    "region_name": "Gers",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.6_1",
+    "region_name": "Haute-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.7_1",
+    "region_name": "Hautes-Pyrénées",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.8_1",
+    "region_name": "Hérault",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.9_1",
+    "region_name": "Lot",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.10_1",
+    "region_name": "Lozère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.11_1",
+    "region_name": "Pyrénées-Orientales",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.13_1",
+    "region_name": "Tarn",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.12_1",
+    "region_name": "Tarn-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.1_1",
+    "region_name": "Loire-Atlantique",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.2_1",
+    "region_name": "Maine-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.3_1",
+    "region_name": "Mayenne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.4_1",
+    "region_name": "Sarthe",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.5_1",
+    "region_name": "Vendée",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.1_1",
+    "region_name": "Alpes-de-Haute-Provence",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.2_1",
+    "region_name": "Alpes-Maritimes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.3_1",
+    "region_name": "Bouches-du-Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.4_1",
+    "region_name": "Hautes-Alpes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.5_1",
+    "region_name": "Var",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.6_1",
+    "region_name": "Vaucluse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-07-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.1_1",
+    "region_name": "Ain",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.2_1",
+    "region_name": "Allier",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.3_1",
+    "region_name": "Ardèche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.4_1",
+    "region_name": "Cantal",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.5_1",
+    "region_name": "Drôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.6_1",
+    "region_name": "Haute-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.7_1",
+    "region_name": "Haute-Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.8_1",
+    "region_name": "Isère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.9_1",
+    "region_name": "Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.10_1",
+    "region_name": "Puy-de-Dôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.11_1",
+    "region_name": "Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.12_1",
+    "region_name": "Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.1_1",
+    "region_name": "Côte-d'Or",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.2_1",
+    "region_name": "Doubs",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.3_1",
+    "region_name": "Haute-Saône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.4_1",
+    "region_name": "Jura",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.5_1",
+    "region_name": "Nièvre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.6_1",
+    "region_name": "Saône-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.7_1",
+    "region_name": "TerritoiredeBelfort",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.8_1",
+    "region_name": "Yonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.1_1",
+    "region_name": "Côtes-d'Armor",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.2_1",
+    "region_name": "Finistère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.3_1",
+    "region_name": "Ille-et-Vilaine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.4_1",
+    "region_name": "Morbihan",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.1_1",
+    "region_name": "Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.2_1",
+    "region_name": "Eure-et-Loir",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.4_1",
+    "region_name": "Indre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.3_1",
+    "region_name": "Indre-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.5_1",
+    "region_name": "Loir-et-Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.6_1",
+    "region_name": "Loiret",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.1_1",
+    "region_name": "Corse-du-Sud",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.2_1",
+    "region_name": "Haute-Corse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.1_1",
+    "region_name": "Ardennes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.2_1",
+    "region_name": "Aube",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.3_1",
+    "region_name": "Bas-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.4_1",
+    "region_name": "Haut-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.5_1",
+    "region_name": "Haute-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.6_1",
+    "region_name": "Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.7_1",
+    "region_name": "Meurthe-et-Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.8_1",
+    "region_name": "Meuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.9_1",
+    "region_name": "Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.10_1",
+    "region_name": "Vosges",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.1_1",
+    "region_name": "Aisne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.2_1",
+    "region_name": "Nord",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.3_1",
+    "region_name": "Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.4_1",
+    "region_name": "Pas-de-Calais",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.5_1",
+    "region_name": "Somme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.1_1",
+    "region_name": "Essonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.2_1",
+    "region_name": "Hauts-de-Seine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.3_1",
+    "region_name": "Paris",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.4_1",
+    "region_name": "Seine-et-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.5_1",
+    "region_name": "Seine-Saint-Denis",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.6_1",
+    "region_name": "Val-d'Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.7_1",
+    "region_name": "Val-de-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.8_1",
+    "region_name": "Yvelines",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 40,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.1_1",
+    "region_name": "Calvados",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.2_1",
+    "region_name": "Eure",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.3_1",
+    "region_name": "Manche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.4_1",
+    "region_name": "Orne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.5_1",
+    "region_name": "Seine-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 75,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.2_1",
+    "region_name": "Charente",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.1_1",
+    "region_name": "Charente-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.3_1",
+    "region_name": "Corrèze",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.4_1",
+    "region_name": "Creuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.5_1",
+    "region_name": "Deux-Sèvres",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.6_1",
+    "region_name": "Dordogne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.7_1",
+    "region_name": "Gironde",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.8_1",
+    "region_name": "Haute-Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.9_1",
+    "region_name": "Landes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.10_1",
+    "region_name": "Lot-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.11_1",
+    "region_name": "Pyrénées-Atlantiques",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.12_1",
+    "region_name": "Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.1_1",
+    "region_name": "Ariège",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.2_1",
+    "region_name": "Aude",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.3_1",
+    "region_name": "Aveyron",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.4_1",
+    "region_name": "Gard",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.5_1",
+    "region_name": "Gers",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.6_1",
+    "region_name": "Haute-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.7_1",
+    "region_name": "Hautes-Pyrénées",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.8_1",
+    "region_name": "Hérault",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.9_1",
+    "region_name": "Lot",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.10_1",
+    "region_name": "Lozère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.11_1",
+    "region_name": "Pyrénées-Orientales",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.13_1",
+    "region_name": "Tarn",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.12_1",
+    "region_name": "Tarn-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.1_1",
+    "region_name": "Loire-Atlantique",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.2_1",
+    "region_name": "Maine-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.3_1",
+    "region_name": "Mayenne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.4_1",
+    "region_name": "Sarthe",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.5_1",
+    "region_name": "Vendée",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.1_1",
+    "region_name": "Alpes-de-Haute-Provence",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.2_1",
+    "region_name": "Alpes-Maritimes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.3_1",
+    "region_name": "Bouches-du-Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.4_1",
+    "region_name": "Hautes-Alpes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.5_1",
+    "region_name": "Var",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.6_1",
+    "region_name": "Vaucluse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-08-15T00:00:00Z",
+    "controlling_faction": "axis",
+    "supply_density": 35,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.1_1",
+    "region_name": "Ain",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.2_1",
+    "region_name": "Allier",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.3_1",
+    "region_name": "Ardèche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.4_1",
+    "region_name": "Cantal",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.5_1",
+    "region_name": "Drôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.6_1",
+    "region_name": "Haute-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.7_1",
+    "region_name": "Haute-Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.8_1",
+    "region_name": "Isère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.9_1",
+    "region_name": "Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.10_1",
+    "region_name": "Puy-de-Dôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.11_1",
+    "region_name": "Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.12_1",
+    "region_name": "Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.1_1",
+    "region_name": "Côte-d'Or",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.2_1",
+    "region_name": "Doubs",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.3_1",
+    "region_name": "Haute-Saône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.4_1",
+    "region_name": "Jura",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.5_1",
+    "region_name": "Nièvre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.6_1",
+    "region_name": "Saône-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.7_1",
+    "region_name": "TerritoiredeBelfort",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.8_1",
+    "region_name": "Yonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "contested",
+    "supply_density": 45,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.1_1",
+    "region_name": "Côtes-d'Armor",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.2_1",
+    "region_name": "Finistère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.3_1",
+    "region_name": "Ille-et-Vilaine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.4_1",
+    "region_name": "Morbihan",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.1_1",
+    "region_name": "Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.2_1",
+    "region_name": "Eure-et-Loir",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.4_1",
+    "region_name": "Indre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.3_1",
+    "region_name": "Indre-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.5_1",
+    "region_name": "Loir-et-Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.6_1",
+    "region_name": "Loiret",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.1_1",
+    "region_name": "Corse-du-Sud",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.2_1",
+    "region_name": "Haute-Corse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.1_1",
+    "region_name": "Ardennes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.2_1",
+    "region_name": "Aube",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.3_1",
+    "region_name": "Bas-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.4_1",
+    "region_name": "Haut-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.5_1",
+    "region_name": "Haute-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.6_1",
+    "region_name": "Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.7_1",
+    "region_name": "Meurthe-et-Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.8_1",
+    "region_name": "Meuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.9_1",
+    "region_name": "Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.10_1",
+    "region_name": "Vosges",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.1_1",
+    "region_name": "Aisne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.2_1",
+    "region_name": "Nord",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.3_1",
+    "region_name": "Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.4_1",
+    "region_name": "Pas-de-Calais",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.5_1",
+    "region_name": "Somme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.1_1",
+    "region_name": "Essonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.2_1",
+    "region_name": "Hauts-de-Seine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.3_1",
+    "region_name": "Paris",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.4_1",
+    "region_name": "Seine-et-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.5_1",
+    "region_name": "Seine-Saint-Denis",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.6_1",
+    "region_name": "Val-d'Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.7_1",
+    "region_name": "Val-de-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.8_1",
+    "region_name": "Yvelines",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.1_1",
+    "region_name": "Calvados",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.2_1",
+    "region_name": "Eure",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.3_1",
+    "region_name": "Manche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.4_1",
+    "region_name": "Orne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.5_1",
+    "region_name": "Seine-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.2_1",
+    "region_name": "Charente",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.1_1",
+    "region_name": "Charente-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.3_1",
+    "region_name": "Corrèze",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.4_1",
+    "region_name": "Creuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.5_1",
+    "region_name": "Deux-Sèvres",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.6_1",
+    "region_name": "Dordogne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.7_1",
+    "region_name": "Gironde",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.8_1",
+    "region_name": "Haute-Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.9_1",
+    "region_name": "Landes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.10_1",
+    "region_name": "Lot-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.11_1",
+    "region_name": "Pyrénées-Atlantiques",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.12_1",
+    "region_name": "Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.1_1",
+    "region_name": "Ariège",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.2_1",
+    "region_name": "Aude",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.3_1",
+    "region_name": "Aveyron",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.4_1",
+    "region_name": "Gard",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.5_1",
+    "region_name": "Gers",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.6_1",
+    "region_name": "Haute-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.7_1",
+    "region_name": "Hautes-Pyrénées",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.8_1",
+    "region_name": "Hérault",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.9_1",
+    "region_name": "Lot",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.10_1",
+    "region_name": "Lozère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.11_1",
+    "region_name": "Pyrénées-Orientales",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.13_1",
+    "region_name": "Tarn",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.12_1",
+    "region_name": "Tarn-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.1_1",
+    "region_name": "Loire-Atlantique",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.2_1",
+    "region_name": "Maine-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.3_1",
+    "region_name": "Mayenne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.4_1",
+    "region_name": "Sarthe",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.5_1",
+    "region_name": "Vendée",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.1_1",
+    "region_name": "Alpes-de-Haute-Provence",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.2_1",
+    "region_name": "Alpes-Maritimes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.3_1",
+    "region_name": "Bouches-du-Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.4_1",
+    "region_name": "Hautes-Alpes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.5_1",
+    "region_name": "Var",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.6_1",
+    "region_name": "Vaucluse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-09-15T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 80,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.1_1",
+    "region_name": "Ain",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.2_1",
+    "region_name": "Allier",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.3_1",
+    "region_name": "Ardèche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.4_1",
+    "region_name": "Cantal",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.5_1",
+    "region_name": "Drôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.6_1",
+    "region_name": "Haute-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.7_1",
+    "region_name": "Haute-Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.8_1",
+    "region_name": "Isère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.9_1",
+    "region_name": "Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.10_1",
+    "region_name": "Puy-de-Dôme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.11_1",
+    "region_name": "Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.1.12_1",
+    "region_name": "Savoie",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.1_1",
+    "region_name": "Côte-d'Or",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.2_1",
+    "region_name": "Doubs",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.3_1",
+    "region_name": "Haute-Saône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.4_1",
+    "region_name": "Jura",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.5_1",
+    "region_name": "Nièvre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.6_1",
+    "region_name": "Saône-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.7_1",
+    "region_name": "TerritoiredeBelfort",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.2.8_1",
+    "region_name": "Yonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.1_1",
+    "region_name": "Côtes-d'Armor",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.2_1",
+    "region_name": "Finistère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.3_1",
+    "region_name": "Ille-et-Vilaine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.3.4_1",
+    "region_name": "Morbihan",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.1_1",
+    "region_name": "Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.2_1",
+    "region_name": "Eure-et-Loir",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.4_1",
+    "region_name": "Indre",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.3_1",
+    "region_name": "Indre-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.5_1",
+    "region_name": "Loir-et-Cher",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.4.6_1",
+    "region_name": "Loiret",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.1_1",
+    "region_name": "Corse-du-Sud",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.5.2_1",
+    "region_name": "Haute-Corse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.1_1",
+    "region_name": "Ardennes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.2_1",
+    "region_name": "Aube",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.3_1",
+    "region_name": "Bas-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.4_1",
+    "region_name": "Haut-Rhin",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.5_1",
+    "region_name": "Haute-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.6_1",
+    "region_name": "Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.7_1",
+    "region_name": "Meurthe-et-Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.8_1",
+    "region_name": "Meuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.9_1",
+    "region_name": "Moselle",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.6.10_1",
+    "region_name": "Vosges",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.1_1",
+    "region_name": "Aisne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.2_1",
+    "region_name": "Nord",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.3_1",
+    "region_name": "Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.4_1",
+    "region_name": "Pas-de-Calais",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.7.5_1",
+    "region_name": "Somme",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.1_1",
+    "region_name": "Essonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.2_1",
+    "region_name": "Hauts-de-Seine",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.3_1",
+    "region_name": "Paris",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.4_1",
+    "region_name": "Seine-et-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.5_1",
+    "region_name": "Seine-Saint-Denis",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.6_1",
+    "region_name": "Val-d'Oise",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.7_1",
+    "region_name": "Val-de-Marne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.8.8_1",
+    "region_name": "Yvelines",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.1_1",
+    "region_name": "Calvados",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.2_1",
+    "region_name": "Eure",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.3_1",
+    "region_name": "Manche",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.4_1",
+    "region_name": "Orne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.9.5_1",
+    "region_name": "Seine-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.2_1",
+    "region_name": "Charente",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.1_1",
+    "region_name": "Charente-Maritime",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.3_1",
+    "region_name": "Corrèze",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.4_1",
+    "region_name": "Creuse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.5_1",
+    "region_name": "Deux-Sèvres",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.6_1",
+    "region_name": "Dordogne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.7_1",
+    "region_name": "Gironde",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.8_1",
+    "region_name": "Haute-Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.9_1",
+    "region_name": "Landes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.10_1",
+    "region_name": "Lot-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.11_1",
+    "region_name": "Pyrénées-Atlantiques",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.10.12_1",
+    "region_name": "Vienne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.1_1",
+    "region_name": "Ariège",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.2_1",
+    "region_name": "Aude",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.3_1",
+    "region_name": "Aveyron",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.4_1",
+    "region_name": "Gard",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.5_1",
+    "region_name": "Gers",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.6_1",
+    "region_name": "Haute-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.7_1",
+    "region_name": "Hautes-Pyrénées",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.8_1",
+    "region_name": "Hérault",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.9_1",
+    "region_name": "Lot",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.10_1",
+    "region_name": "Lozère",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.11_1",
+    "region_name": "Pyrénées-Orientales",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.13_1",
+    "region_name": "Tarn",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.11.12_1",
+    "region_name": "Tarn-et-Garonne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.1_1",
+    "region_name": "Loire-Atlantique",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.2_1",
+    "region_name": "Maine-et-Loire",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.3_1",
+    "region_name": "Mayenne",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.4_1",
+    "region_name": "Sarthe",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.12.5_1",
+    "region_name": "Vendée",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.1_1",
+    "region_name": "Alpes-de-Haute-Provence",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.2_1",
+    "region_name": "Alpes-Maritimes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.3_1",
+    "region_name": "Bouches-du-Rhône",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.4_1",
+    "region_name": "Hautes-Alpes",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.5_1",
+    "region_name": "Var",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  },
+  {
+    "region_id": "FRA.13.6_1",
+    "region_name": "Vaucluse",
+    "country_code": "FRA",
+    "admin_level": 2,
+    "timestamp": "1944-12-01T00:00:00Z",
+    "controlling_faction": "allied",
+    "supply_density": 85,
+    "terrain_type": "plains"
+  }
+]

@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useAppStore } from "@/stores/useAppStore";
-import { getTroopPoints, getRootDivisionId, hasEquipmentData, getSupplyLineGeoJSON, getSupplyLineArrowheads, getEventGeoJSON } from "@/services/dataService";
+import { getTroopPoints, getRootDivisionId, hasEquipmentData, getSupplyLineGeoJSON, getSupplyLineArrowheads, getEventGeoJSON, getTerritoryControl } from "@/services/dataService";
+import gadmFrance from "@/data/gadm-france-departments.json";
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
 
@@ -53,6 +54,31 @@ export default function GlobeMap() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const popupRef = useRef<mapboxgl.Popup | null>(null);
+
+  function getTerritoryGeoJSON(beforeDate?: string): GeoJSON.FeatureCollection {
+    const control = getTerritoryControl(beforeDate);
+    const controlMap = new Map<string, { faction: string; supply_density: number }>();
+    control.forEach((c) => {
+      controlMap.set(c.region_id, { faction: c.controlling_faction, supply_density: c.supply_density });
+    });
+
+    return {
+      type: "FeatureCollection",
+      features: (gadmFrance as GeoJSON.FeatureCollection).features
+        .filter((f) => controlMap.has(f.properties?.region_id))
+        .map((f) => {
+          const data = controlMap.get(f.properties?.region_id)!;
+          return {
+            ...f,
+            properties: {
+              ...f.properties,
+              faction: data.faction,
+              supply_density: data.supply_density,
+            },
+          };
+        }),
+    };
+  }
 
   useEffect(() => {
     if (map.current || !mapContainer.current) return;
@@ -418,6 +444,57 @@ export default function GlobeMap() {
         }
       });
 
+      // --- H3 Hex Control Layer ---
+      const hexGeoJSON = getTerritoryGeoJSON(currentDate);
+      map.current.addSource("hex-control", {
+        type: "geojson",
+        data: hexGeoJSON,
+      });
+
+      // Hex fill
+      map.current.addLayer({
+        id: "hex-control-fill",
+        type: "fill",
+        source: "hex-control",
+        paint: {
+          "fill-color": [
+            "case",
+            ["==", ["get", "faction"], "allied"], "#00d4ff",
+            ["==", ["get", "faction"], "axis"], "#ff3344",
+            ["==", ["get", "faction"], "contested"], "#ffaa00",
+            "rgba(255,255,255,0.05)"
+          ],
+          "fill-opacity": [
+            "case",
+            ["==", ["get", "faction"], "contested"], 0.15,
+            0.12
+          ],
+        },
+      }, "clusters-glow"); // Insert below unit layers
+
+      // Hex borders
+      map.current.addLayer({
+        id: "hex-control-border",
+        type: "line",
+        source: "hex-control",
+        paint: {
+          "line-color": [
+            "case",
+            ["==", ["get", "faction"], "allied"], "rgba(0, 212, 255, 0.3)",
+            ["==", ["get", "faction"], "axis"], "rgba(255, 51, 68, 0.3)",
+            ["==", ["get", "faction"], "contested"], "rgba(255, 170, 0, 0.3)",
+            "rgba(255,255,255,0.05)"
+          ],
+          "line-width": 1,
+        },
+      }, "clusters-glow");
+
+      // Start with visibility matching the toggle
+      const hexVis = useAppStore.getState().visibleLayers.hexControl ? "visible" : "none";
+      ["hex-control-fill", "hex-control-border"].forEach((id) => {
+        map.current!.setLayoutProperty(id, "visibility", hexVis);
+      });
+
       // --- Interactions ---
 
       // Click cluster — selectable only if all points share the same root division
@@ -614,6 +691,10 @@ export default function GlobeMap() {
         if (eventsSource) {
           eventsSource.setData(getEventGeoJSON(state.currentDate));
         }
+        const hexSource = map.current.getSource("hex-control") as mapboxgl.GeoJSONSource | undefined;
+        if (hexSource) {
+          hexSource.setData(getTerritoryGeoJSON(state.currentDate));
+        }
       }
     });
     return unsub;
@@ -642,6 +723,12 @@ export default function GlobeMap() {
         ["events-glow", "events-markers", "events-labels"].forEach((id) => {
           if (map.current!.getLayer(id)) {
             map.current!.setLayoutProperty(id, "visibility", eventsVisibility);
+          }
+        });
+        const hexVisibility = state.visibleLayers.hexControl ? "visible" : "none";
+        ["hex-control-fill", "hex-control-border"].forEach((id) => {
+          if (map.current!.getLayer(id)) {
+            map.current!.setLayoutProperty(id, "visibility", hexVisibility);
           }
         });
       }
