@@ -133,7 +133,7 @@ export default function TheaterComparisonOverlay() {
             <AreaChart data={chartData}>
               <XAxis dataKey="date" tick={{ fontSize: 10, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fontSize: 10, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }} axisLine={false} tickLine={false} width={30} tickFormatter={fmtK} />
-              <Tooltip {...tooltipStyle} formatter={(v: number) => fmtK(v)} />
+              <Tooltip {...tooltipStyle} formatter={(v) => fmtK(Number(v))} />
               <Area type="monotone" dataKey="Allied Strength" stroke={CYAN} fill={CYAN} fillOpacity={0.15} strokeWidth={1.5} isAnimationActive={false} />
               <Area type="monotone" dataKey="Axis Strength" stroke={RED} fill={RED} fillOpacity={0.15} strokeWidth={1.5} isAnimationActive={false} />
             </AreaChart>
@@ -146,7 +146,7 @@ export default function TheaterComparisonOverlay() {
             <LineChart data={chartData}>
               <XAxis dataKey="date" tick={{ fontSize: 10, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fontSize: 10, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }} axisLine={false} tickLine={false} width={30} tickFormatter={fmtK} />
-              <Tooltip {...tooltipStyle} formatter={(v: number) => fmtK(v)} />
+              <Tooltip {...tooltipStyle} formatter={(v) => fmtK(Number(v))} />
               <Line type="monotone" dataKey="Allied Casualties" stroke={CYAN} strokeWidth={1.5} dot={false} isAnimationActive={false} />
               <Line type="monotone" dataKey="Axis Casualties" stroke={RED} strokeWidth={1.5} dot={false} isAnimationActive={false} />
             </LineChart>
@@ -159,7 +159,7 @@ export default function TheaterComparisonOverlay() {
             <AreaChart data={chartData}>
               <XAxis dataKey="date" tick={{ fontSize: 10, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fontSize: 10, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }} axisLine={false} tickLine={false} width={30} tickFormatter={fmtK} />
-              <Tooltip {...tooltipStyle} formatter={(v: number) => `${fmtK(v)} t/d`} />
+              <Tooltip {...tooltipStyle} formatter={(v) => `${fmtK(Number(v))} t/d`} />
               <Area type="monotone" dataKey="Supply Throughput" stroke={accent} fill={accent} fillOpacity={0.15} strokeWidth={1.5} isAnimationActive={false} />
             </AreaChart>
           </ResponsiveContainer>
@@ -171,7 +171,7 @@ export default function TheaterComparisonOverlay() {
             <BarChart data={chartData}>
               <XAxis dataKey="date" tick={{ fontSize: 10, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fontSize: 10, fill: "rgba(224,224,224,0.3)", fontFamily: "monospace" }} axisLine={false} tickLine={false} width={30} />
-              <Tooltip {...tooltipStyle} formatter={(v: number) => `${v} hexes`} />
+              <Tooltip {...tooltipStyle} formatter={(v) => `${v} hexes`} />
               <Bar dataKey="Allied Territory" fill={CYAN} fillOpacity={0.6} isAnimationActive={false} />
               <Bar dataKey="Axis Territory" fill={RED} fillOpacity={0.6} isAnimationActive={false} />
               <Bar dataKey="Contested" fill={AMBER} fillOpacity={0.6} isAnimationActive={false} />
